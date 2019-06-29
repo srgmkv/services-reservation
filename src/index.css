@@ -14,7 +14,8 @@ body {
 
 .service-item {
   border: 2px solid blue;
-  width: 80px;
-  margin-right: 5px;
+  width: 100px;
+  height: 150px;
+  margin: 5px;
 }
 

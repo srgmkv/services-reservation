@@ -20,13 +20,11 @@ class App extends React.Component {
 		this.props.getServiceListData();
 	}
 
-
-
 	render() {
 		return (
 			<div className="App">
 				CFT
-        
+
 				{this.state.dataIsLoaded && <div>Data is loaded</div>}
 				<List />
 				<ServicesBlock />

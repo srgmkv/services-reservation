@@ -6,7 +6,7 @@ export function reserveService(payload) {
 
 export function getCalendarData() {
   return function(dispatch) {
-    return fetch("http://localhost:3000/dates.json")
+    return fetch("https://raw.githubusercontent.com/srgmkv/services-reservation/master/public/dates.json")
       .then(response => response.json())
       .then(json => {
         dispatch({ type: types.CALENDAR_DATA_LOADED, payload: json });
@@ -16,7 +16,7 @@ export function getCalendarData() {
 
 export function getServiceListData() {
   return function(dispatch) {
-    return fetch("http://localhost:3000/services.json")
+    return fetch("https://raw.githubusercontent.com/srgmkv/services-reservation/master/public/services.json")
       .then(response => response.json())
       .then(json => {
         dispatch({ type: types.SERVICES_DATA_LOADED, payload: json });
