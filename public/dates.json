@@ -1,0 +1,192 @@
+[
+  {
+    "id": "hm6awg1lev",
+    "dates": [
+      {
+        "date": "01-06-2019",
+        "times": [
+          {
+            "isBlocked": false,
+            "value": "09:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "10:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "11:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "12:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "13:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "14:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "15:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "16:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "17:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "18:00"
+          }
+        ]
+      },
+      {
+        "date": "02-06-2019",
+        "times": [
+          {
+            "isBlocked": true,
+            "value": "09:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "10:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "11:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "12:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "13:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "14:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "15:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "16:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "17:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "18:00"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "v38pfojaj5",
+    "dates": [
+      {
+        "date": "01-06-2019",
+        "times": [
+          {
+            "isBlocked": false,
+            "value": "09:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "10:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "11:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "12:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "13:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "14:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "15:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "16:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "17:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "18:00"
+          }
+        ]
+      },
+      {
+        "date": "02-06-2019",
+        "times": [
+          {
+            "isBlocked": true,
+            "value": "09:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "10:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "11:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "12:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "13:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "14:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "15:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "16:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "17:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "18:00"
+          }
+        ]
+      }
+    ]
+  }
+]

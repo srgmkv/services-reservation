@@ -1,0 +1,112 @@
+[
+	{
+		"id": "hm6awg1lev",
+		"price": "650",
+		"type": "hair styling",
+		"company": {
+			"name": "Glyph Salon",
+			"phone": "+7 (821) 404-2529",
+			"address": "576 Knapp Street, Turah, Arkansas, 7174",
+			"about": "Glyph was born from the idea that every individual is complex and uniquely beautiful. Manifesting a client’s inner beauty into their outer physical form is the ultimate accomplishment for a beauty professional, and one we have devoted our careers to. We believe that everyone can be their own icon."
+		}
+	},
+	{
+		"id": "v38pfojaj5",
+		"price": "4500",
+		"type": "hair coloring",
+		"company": {
+			"name": "Glyph Salon",
+			"phone": "+7 (821) 404-2529",
+			"address": "576 Knapp Street, Turah, Arkansas, 7174",
+			"about": "Glyph was born from the idea that every individual is complex and uniquely beautiful. Manifesting a client’s inner beauty into their outer physical form is the ultimate accomplishment for a beauty professional, and one we have devoted our careers to. We believe that everyone can be their own icon."
+		}
+	},
+	{
+		"id": "y50ap8fu9b",
+		"price": "3700",
+		"type": "hair coloring",
+		"company": {
+			"name": "Colorized",
+			"phone": "+7 (564) 3978-5678",
+			"address": "576 Knapp Street, Turah, Arkansas, 7174",
+			"about": "Glyph was born from the idea that every individual is complex and uniquely beautiful. Manifesting a client’s inner beauty into their outer physical form is the ultimate accomplishment for a beauty professional, and one we have devoted our careers to. We believe that everyone can be their own icon."
+		}
+	},
+	{
+		"id": "2z3ya9zask",
+		"price": "6230",
+		"type": "tattooing",
+		"company": {
+			"name": "RABBLE ROUSER TATTOO",
+			"phone": "+7 (938) 789-25-25",
+			"address": "1050 Lenina Street, Turah, Arkansas, 7175",
+			"about": "Rabble Rouser Tattoo is a collective of custom tattoo artists with over 75 years of combined professional experience"
+		}
+	},
+	{
+		"id": "wpoj27n86c",
+		"price": "1750",
+		"type": "make up",
+		"company": {
+			"name": "Makeup Mandy",
+			"phone": "+7 (818) 450-59-87",
+			"address": "495 Marx Prospect, Tucson, Arkansas, 7043",
+			"about": "Glyph was born from the idea that every individual is complex and uniquely beautiful. Manifesting a client’s inner beauty into their outer physical form is the ultimate accomplishment for a beauty professional, and one we have devoted our careers to. We believe that everyone can be their own icon."
+		}
+	},
+	{
+		"id": "yfjltah4by",
+		"price": "2140",
+		"type": "skin care",
+		"company": {
+			"name": "Care of you",
+			"phone": "+7 (456) 895-2597",
+			"address": "576 Care prospect, Moscow, Texas, 4197",
+			"about": "We always care of you."
+		}
+	},
+	{
+		"id": "v9r0w7d13l",
+		"price": "2600",
+		"type": "skin care",
+		"company": {
+			"name": "Medical Care",
+			"phone": "+7 (367) 695-24-25",
+			"address": "5698 Sunset blvd, LA, California, 3674",
+			"about": "Every individual is complex and uniquely beautiful. Manifesting a client’s inner beauty into their outer physical form is the ultimate accomplishment for a beauty professional, and one we have devoted our careers to. We believe that everyone can be their own icon."
+		}
+	},
+	{
+		"id": "2t70rnu4ev",
+		"price": "1980",
+		"type": "styling",
+		"company": {
+			"name": "Person Lab",
+			"phone": "+7 (456) 999-25-29",
+			"address": "576 Anylane Strees, San-Diego, NY, 6597",
+			"about": "Person lab was born from the idea that every individual is complex and uniquely beautiful. Manifesting a client’s inner beauty into their outer physical form is the ultimate accomplishment for a beauty professional, and one we have devoted our careers to. We believe that everyone can be their own icon."
+		}
+	},
+	{
+		"id": "yy3qedia56",
+		"price": "840",
+		"type": "hair styling",
+		"company": {
+			"name": "Expert Studio",
+			"phone": "+7 (753) 505-07-35",
+			"address": "115 Styling Street, Albuqerke, New Mexico, 5867",
+			"about": "Glyph was born from the idea that every individual is complex and uniquely beautiful. Manifesting a client’s inner beauty into their outer physical form is the ultimate accomplishment for a beauty professional, and one we have devoted our careers to. We believe that everyone can be their own icon."
+		}
+	},
+	{
+		"id": "0jxhiz07nq",
+		"price": "2730",
+		"type": "make up",
+		"company": {
+			"name": "Brandolyn",
+			"phone": "+7 (567) 456-657567",
+			"address": "777 Bran Street, Seatle, WA, 76867",
+			"about": "Brandolyn was born from the idea that every individual is complex and uniquely beautiful. Manifesting a client’s inner beauty into their outer physical form is the ultimate accomplishment for a beauty professional, and one we have devoted our careers to. We believe that everyone can be their own icon."
+		}
+	}
+]
