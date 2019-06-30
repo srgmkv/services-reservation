@@ -5,6 +5,12 @@ import MainForm from './MainFom';
 import ReservationForm from './ReservationForm';
 import { getCalendarData, getServiceListData } from '../state-controls/actions';
 
+const mapStateToProps = state => {
+	return {
+		isReservationFormShown: state.isReservationFormShown
+	}
+};
+
 class App extends React.Component {
 
 	componentDidMount() {
@@ -15,14 +21,14 @@ class App extends React.Component {
 	render() {
 		return (
 			<div className="App">
-				<MainForm />
+				{this.props.isReservationFormShown ? < ReservationForm /> : <MainForm />}
 			</div>
-		);
+			);
+		}
 	}
-}
-
-
-export default connect(
-	null,
-	{ getCalendarData, getServiceListData }
-)(App);
+	
+	
+	export default connect(
+		mapStateToProps,
+	{getCalendarData, getServiceListData }
+			)(App);

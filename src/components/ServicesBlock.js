@@ -7,7 +7,8 @@ const mapStateToProps = state => {
 	return {
 		servicesList: state.servicesList,
 		filterConditions: state.filterConditions,
-		filteredServicesList: state.filteredServicesList
+		filteredServicesList: state.filteredServicesList,
+		isReservationFormShown: state.isReservationFormShown
 	}
 };
 
@@ -34,7 +35,6 @@ class ServicesBlock extends React.Component {
 	}
 
 	handleServiceClick = (e) => {
-		//e.target
 		console.log('e.target', e.target.closest('.service-item').id);
 		this.props.toggleAppForm();
 
