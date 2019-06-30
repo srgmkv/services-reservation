@@ -1,0 +1,28 @@
+.haircoloring {
+  background-color: rgba(8, 235, 235, 0.3);
+}
+
+.hairstyling {
+  background-color: rgba(163, 8, 235, 0.3);
+}
+
+.makeup {
+  background-color: rgba(235, 144, 8, 0.3);
+}
+.skincare {
+  background-color: rgba(8, 235, 27, 0.3);
+}
+
+.massage {
+  background-color: rgba(8, 125, 235, 0.418);
+}
+
+.tattooing {
+  background-color: rgb(99, 235, 8);
+}
+
+.styling {
+  background-color: rgb(243, 235, 235);
+}
+
+<div className={`service-item ${el.type.replace(' ', '')}`}
