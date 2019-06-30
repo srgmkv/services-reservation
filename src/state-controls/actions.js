@@ -8,13 +8,13 @@ export function toFilterServiceList(payload) {
   return { type: types.FILTER_SERVICE_LIST, payload }
 };
 
-export function toggleAppForm() {
-  return { type: types.TOGGLE_APP_FORM }
+export function toggleAppForm(payload) {
+  return { type: types.TOGGLE_APP_FORM, payload }
 };
 
 export function getCalendarData() {
   return function (dispatch) {
-    return fetch("https://raw.githubusercontent.com/srgmkv/services-reservation/master/public/dates.json")
+    return fetch("http://localhost:3000/dates.json")
       .then(response => response.json())
       .then(json => {
         dispatch({ type: types.CALENDAR_DATA_LOADED, payload: json });

@@ -18,14 +18,15 @@ const initialState = {
 			time: '15:00'
 		}
 	],
-	calendar: [],
+	calendar: {},
 	servicesList: [],
 	filterConditions: {
 		sortByType: '',
 		sortByName: ''
 	},
 	filteredServicesList: [],
-	isReservationFormShown: false
+	isReservationFormShown: false,
+	idToReservForm: ''
 };
 
 function rootReducer(state = initialState, action) {
@@ -38,7 +39,8 @@ function rootReducer(state = initialState, action) {
 
 	if (action.type === types.CALENDAR_DATA_LOADED) {
 		return Object.assign({}, state, {
-			calendar: state.calendar.concat(action.payload)
+			calendar: action.payload
+			
 		});
 	}
 
@@ -71,8 +73,11 @@ function rootReducer(state = initialState, action) {
 	if (action.type === types.TOGGLE_APP_FORM) {
 		return {
 			...state,
-			isReservationFormShown: !state.isReservationFormShown
+			isReservationFormShown: !state.isReservationFormShown,
+			idToReservForm: action.payload || ''
+
 		}
+
 	}
 
 	return state;

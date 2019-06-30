@@ -4,7 +4,9 @@ import { toggleAppForm } from '../state-controls/actions';
 
 const mapStateToProps = state => {
   return {
-    isReservationFormShown: state.isReservationFormShown
+    calendar: state.calendar,
+    isReservationFormShown: state.isReservationFormShown,
+    idToReservForm: state.idToReservForm
   }
 };
 
@@ -14,15 +16,38 @@ function mapDispatchToProps(dispatch) {
   };
 }
 
-
-
 function ReservationForm(props) {
   const hideReservationForm = () => props.toggleAppForm();
 
+  const id = props.idToReservForm;
+  const service = props.calendar.filter(el => el.id === id)[0]
+  const dates = service.dates.map((el, index) => (
+    <option key={index}>{el.date}</option>
+  ))
+  
+
+
+
+
   return (
-    <>
-      <button onClick={hideReservationForm}>CLCIK</button>
-    </>
+    <div className="reservation-form">
+      <button id="cancel" onClick={hideReservationForm}>Cancel</button>
+      <select className="date-select" id="date-select" >
+        <option value={''}>choose date</option>
+
+        {dates}
+
+      </select>
+
+      <select className="time-select" id="time-select" >
+        <option value={''}>choose time</option>
+
+        
+
+      </select>
+
+
+    </div>
   )
 
 }

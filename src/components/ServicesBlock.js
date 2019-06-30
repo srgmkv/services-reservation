@@ -15,7 +15,7 @@ const mapStateToProps = state => {
 function mapDispatchToProps(dispatch) {
 	return {
 		toFilterServiceList: value => dispatch(toFilterServiceList(value)),
-		toggleAppForm: () => dispatch(toggleAppForm())
+		toggleAppForm: (value) => dispatch(toggleAppForm(value))
 
 	};
 }
@@ -26,19 +26,19 @@ class ServicesBlock extends React.Component {
 		const { value, id } = e.target;
 
 		const objCreator = (property) => (
-			Object.assign({}, this.props.filterConditions, {
+			{
+				...this.props.filterConditions,
 				[property]: value
-			})
-		)
-
+			}
+		);
 		this.props.toFilterServiceList(objCreator(id));
 	}
 
 	handleServiceClick = (e) => {
-		console.log('e.target', e.target.closest('.service-item').id);
-		this.props.toggleAppForm();
-
+		const data = e.target.closest('.service-item').id;
+		this.props.toggleAppForm(data);
 	}
+
 	render() {
 		const serviceTypes = [...new Set(this.props.servicesList.map(el => el.type))];
 		return (
@@ -46,12 +46,7 @@ class ServicesBlock extends React.Component {
 				<select className="select-by-type" id="sortByType" onChange={this.handleChange}>
 					<option value={''}>choose your service</option>
 					{
-						serviceTypes.map((el, index) => {
-
-							return <option key={index}>
-								{el}
-							</option>
-						})
+						serviceTypes.map((el, index) => <option key={index}>{el}</option>)
 					}
 				</select>
 
