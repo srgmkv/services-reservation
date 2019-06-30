@@ -6,6 +6,10 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+body {
+  max-width: 700px;
+  margin: 5px auto;
+}
 
 .services-block {
   display: flex;
@@ -14,8 +18,32 @@ body {
 
 .service-item {
   border: 2px solid blue;
-  width: 100px;
-  height: 150px;
+  width: 109px;
+  height: 100px;
+  margin: 0 0 5px 5px;
+}
+
+p {
   margin: 5px;
 }
+.reserved-item {
+  margin: 5px 0 ;
+}
+
+#reserved-list-header{
+  display: inline-block;
+  font-size: 1.5em;
+  background-color: brown;
+  color: white;
+  padding: 3px 5px;
+  border-radius: 7px;
+}
+
+.select-by-type {
+  margin-bottom: 7px;
+}
+#reserved-list-header, .select-by-type, .reserved-item {
+  margin-left: 5px;
+}
+
 

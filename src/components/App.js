@@ -8,12 +8,6 @@ import { getCalendarData, getServiceListData } from '../state-controls/actions';
 
 
 class App extends React.Component {
-	constructor() {
-		super();
-		this.state = {
-			dataIsLoaded: false
-		}
-	}
 
 	componentDidMount() {
 		this.props.getCalendarData();
@@ -23,9 +17,6 @@ class App extends React.Component {
 	render() {
 		return (
 			<div className="App">
-				CFT
-
-				{this.state.dataIsLoaded && <div>Data is loaded</div>}
 				<List />
 				<ServicesBlock />
 				{/*<Form />*/}
@@ -34,13 +25,8 @@ class App extends React.Component {
 	}
 }
 
-function mapStateToProps(state) {
-	return {
-		calendar: state.calendar,
-		serviceList: state.serviceList
-	};
-}
+
 export default connect(
-	mapStateToProps,
+	null,
 	{ getCalendarData, getServiceListData }
 )(App);

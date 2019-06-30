@@ -108,5 +108,16 @@
 			"address": "777 Bran Street, Seatle, WA, 76867",
 			"about": "Brandolyn was born from the idea that every individual is complex and uniquely beautiful. Manifesting a client’s inner beauty into their outer physical form is the ultimate accomplishment for a beauty professional, and one we have devoted our careers to. We believe that everyone can be their own icon."
 		}
+	},
+	{
+		"id": "try6wgulev",
+		"price": "3500",
+		"type": "massage",
+		"company": {
+			"name": "Glider",
+			"phone": "+7 (821) 404-2529",
+			"address": "576 Knapp Street, Turah, Arkansas, 7174",
+			"about": "Glyph was born from the idea that every individual is complex and uniquely beautiful. Manifesting a client’s inner beauty into their outer physical form is the ultimate accomplishment for a beauty professional, and one we have devoted our careers to. We believe that everyone can be their own icon."
+		}
 	}
 ]

@@ -19,7 +19,9 @@ const initialState = {
     }
   ],
   calendar: [],
-  serviceList: []
+  servicesList: [],
+  searchText: '',
+  filteredServicesList: []
 };
 
 function rootReducer(state = initialState, action) {
@@ -37,14 +39,28 @@ function rootReducer(state = initialState, action) {
   }
 
   if (action.type === types.SERVICES_DATA_LOADED) {
+    const initList = state.servicesList.concat(action.payload)
     return Object.assign({}, state, {
-      serviceList: state.serviceList.concat(action.payload)
+      servicesList: initList,
+      filteredServicesList: initList
     });
   }
 
+  if (action.type === types.SEARCH_TEXT) {
+    const regex = new RegExp(`^${action.payload}`, 'i');
+    const filteredServicesList = state.servicesList.filter(el => regex.test(el.company.name))
+    return Object.assign({}, state, {
+      searchText: action.payload,
+      filteredServicesList: filteredServicesList
+    });
+  
 
 
-  return state;
+}
+
+
+
+return state;
 };
 
 export default rootReducer;
