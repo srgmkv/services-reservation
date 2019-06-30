@@ -8,7 +8,6 @@ const mapStateToProps = state => {
 		filterConditions: state.filterConditions,
 		filteredServicesList: state.filteredServicesList
 	}
-
 };
 
 function mapDispatchToProps(dispatch) {
@@ -53,6 +52,7 @@ class ServicesBlock extends React.Component {
 				<input type="text" id="sortByName" onChange={this.handleChange} />
 
 				<div className="services-block">
+<<<<<<< HEAD
 					{
 						this.props.filteredServicesList.map(el => (
 							<div className={`service-item ${el.type.replace(' ', '')}`}
@@ -66,6 +66,17 @@ class ServicesBlock extends React.Component {
 							</div>
 						))
 					}
+=======
+					{this.props.filteredServicesList.map(el => (
+						
+						<div className={`service-item ${el.type.replace(' ', '')}`}
+						key={Math.round(Math.random() * 1e8)}>
+							<p>{el.type}</p>
+							<p>{el.price} &#x20bd;</p>
+							<p>{el.company.name}</p>
+						</div>
+					))}
+>>>>>>> side
 				</div>
 			</>
 		)
