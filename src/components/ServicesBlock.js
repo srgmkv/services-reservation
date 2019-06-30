@@ -27,34 +27,50 @@ class ServicesBlock extends React.Component {
 				[property]: value
 			})
 		)
-	
+
 		this.props.toFilterServiceList(objCreator(id));
 	}
+	handleServiceClick = (e) => {
+		//e.target
+		console.log('e.target', e.target.closest('.service-item').id)
 
+	}
 	render() {
+		const serviceTypes = [...new Set(this.props.servicesList.map(el => el.type))];
 		return (
 			<>
 				<select className="select-by-type" id="sortByType" onChange={this.handleChange}>
 					<option value={''}>choose your service</option>
-					{[...new Set(this.props.servicesList.map(el => el.type))].map(el => <option>{el}</option>)}
+					{
+						serviceTypes.map(el => (
+							<option key={Math.round(Math.random() * 1e8)}>
+								{el}
+							</option>
+						))
+					}
 				</select>
 
 				<input type="text" id="sortByName" onChange={this.handleChange} />
 
 				<div className="services-block">
-					{this.props.filteredServicesList.map(el => (
-						<div className="service-item" key={Math.round(Math.random() * 1e8)}>
-							<p>{el.type}</p>
-							<p>{el.price} &#x20bd;</p>
-							<p>{el.company.name}</p>
-						</div>
-					))}
+					{
+						this.props.filteredServicesList.map(el => (
+							<div className={`service-item ${el.type.replace(' ', '')}`}
+								key={Math.round(Math.random() * 1e8)}
+								id={el.id}
+								onClick={this.handleServiceClick}
+							>
+								<p>{el.type}</p>
+								<p>{el.price} &#x20bd;</p>
+								<p>{el.company.name}</p>
+							</div>
+						))
+					}
 				</div>
 			</>
 		)
 
 	}
 }
-
 
 export default connect(mapStateToProps, mapDispatchToProps)(ServicesBlock);
