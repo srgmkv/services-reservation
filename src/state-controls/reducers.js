@@ -35,6 +35,7 @@ const initialState = {
 };
 
 function rootReducer(state = initialState, action) {
+	
 	if (action.type === types.SEND_SELECTED_DATE_TIME) {
 		return Object.assign({}, state, {
 			selectedDateTime: action.payload

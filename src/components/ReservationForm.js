@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { toggleAppForm, sendDateTime } from '../state-controls/actions';
+import { toggleAppForm, sendDateTime, reserveService } from '../state-controls/actions';
 
 
 const mapStateToProps = state => {
@@ -8,24 +8,27 @@ const mapStateToProps = state => {
     calendar: state.calendar,
     isReservationFormShown: state.isReservationFormShown,
     idToReservForm: state.idToReservForm,
-    selectedDateTime: state.selectedDateTime
+    selectedDateTime: state.selectedDateTime,
+    servicesList: state.servicesList
   }
 };
 
 function mapDispatchToProps(dispatch) {
   return {
     toggleAppForm: () => dispatch(toggleAppForm()),
-    sendDateTime: (value) => dispatch(sendDateTime(value))
+    sendDateTime: (value) => dispatch(sendDateTime(value)),
+    reserveService: (value) => dispatch(reserveService(value))
   };
 }
 
 function ReservationForm(props) {
+  const serviceId = props.idToReservForm;
 
   const hideReservationForm = () => props.toggleAppForm();
 
+  //обработчик селектов: добавляем выбранную дату и время в состояние
   const handleSelect = e => {
     const { value, id } = e.target;
-
     const objCreator = (property) => (
       {
         ...props.selectedDateTime,
@@ -33,25 +36,36 @@ function ReservationForm(props) {
       }
     );
     props.sendDateTime(objCreator(id));
-  }
+  };
 
-  const id = props.idToReservForm;
+  //резервируем услугу
+  const reserveTime = () => {
+    const selectedTypeOfService = props.servicesList.filter(el=> el.id === serviceId)[0].type;
+    const data = {
+      serviceType: selectedTypeOfService,
+      date: props.selectedDateTime.date,
+      time: props.selectedDateTime.time
+    }
+    props.reserveService(data);
+    hideReservationForm();
+  };
 
-  const service = props.calendar.filter(el => el.id === id)[0];
-  const dates = service.dates.map((el, index) => (
+  //конструируем выпадающий список дат по выбранной услуге
+  const serviceResevingData  = props.calendar.filter(el => el.id === serviceId)[0].dates
+  const arrayOfDatesToJSX = serviceResevingData.map((el, index) => (
     <option key={index}>{el.date}</option>
   ))
 
+  //конструируем выпадающий список со временем записи
   const { date } = props.selectedDateTime;
-  const timesToSelect = service.dates.filter(el => el.date === date)[0]
-  let times;
+  const timesToSelect = serviceResevingData.filter(el => el.date === date)[0]
+  let arrayOfTimesToJSX;
   if (props.selectedDateTime.date) {
-    times = timesToSelect.times.filter(el => el.isBlocked)
+    arrayOfTimesToJSX = timesToSelect.times.filter(el => el.isBlocked)
       .map((el, index) => (
         <option key={index}>{el.value}</option>
       ))
   }
-
 
   return (
     <div className="reservation-form">
@@ -59,7 +73,7 @@ function ReservationForm(props) {
 
       <select className="date-select" id="date" onChange={handleSelect} >
         <option value={''}>choose date</option>
-        {dates}
+        {arrayOfDatesToJSX}
       </select>
 
       <select className="time-select" id="time"
@@ -67,9 +81,10 @@ function ReservationForm(props) {
         onChange={handleSelect}
       >
         <option value={''}>choose time</option>
-        {times}
+        {arrayOfTimesToJSX}
       </select>
 
+      <button id="reserve" onClick={reserveTime}>Reserve</button>
 
     </div>
   )

@@ -33,8 +33,9 @@ class ServicesBlock extends React.Component {
 		this.props.toFilterServiceList(objCreator(id));
 	}
 
-	handleServiceClick = (e) => {
-		const data = e.target.closest('.service-item').id;
+	handleClickByServiceItem = (e) => {
+		const data = e.target.closest('.service-item').id
+		console.log('data', data)
 		this.props.toggleAppForm(data);
 	}
 
@@ -57,7 +58,7 @@ class ServicesBlock extends React.Component {
 						<div className={`service-item ${el.type.replace(' ', '')}`}
 							key={index}
 							id={el.id}
-							onClick={this.handleServiceClick}>
+							onClick={this.handleClickByServiceItem}>
 							<p>{el.type}</p>
 							<p>{el.price} &#x20bd;</p>
 							<p>{el.company.name}</p>
