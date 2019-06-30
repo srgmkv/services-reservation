@@ -1,11 +1,9 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import ServicesBlock from './ServicesBlock';
-import List from './List';
+
+import MainForm from './MainFom';
+import ReservationForm from './ReservationForm';
 import { getCalendarData, getServiceListData } from '../state-controls/actions';
-
-//import Form from './Form';
-
 
 class App extends React.Component {
 
@@ -17,9 +15,7 @@ class App extends React.Component {
 	render() {
 		return (
 			<div className="App">
-				<List />
-				<ServicesBlock />
-				{/*<Form />*/}
+				<MainForm />
 			</div>
 		);
 	}
