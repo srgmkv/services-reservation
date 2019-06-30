@@ -24,7 +24,8 @@ const initialState = {
 		sortByType: '',
 		sortByName: ''
 	},
-	filteredServicesList: []
+	filteredServicesList: [],
+	isReservationFormShown: false
 };
 
 function rootReducer(state = initialState, action) {
@@ -65,6 +66,13 @@ function rootReducer(state = initialState, action) {
 			filterConditions: action.payload,
 			filteredServicesList: searchFunction(nameValue, typeValue)
 		});
+	}
+
+	if (action.type === types.TOGGLE_APP_FORM) {
+		return {
+			...state,
+			isReservationFormShown: !state.isReservationFormShown
+		}
 	}
 
 	return state;
