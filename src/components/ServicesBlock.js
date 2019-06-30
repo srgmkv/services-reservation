@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { toFilterServiceList } from '../state-controls/actions';
+import { toggleAppForm } from '../state-controls/actions';
 
 const mapStateToProps = state => {
 	return {
@@ -12,7 +13,9 @@ const mapStateToProps = state => {
 
 function mapDispatchToProps(dispatch) {
 	return {
-		toFilterServiceList: value => dispatch(toFilterServiceList(value))
+		toFilterServiceList: value => dispatch(toFilterServiceList(value)),
+		toggleAppForm: () => dispatch(toggleAppForm())
+
 	};
 }
 
@@ -29,9 +32,11 @@ class ServicesBlock extends React.Component {
 
 		this.props.toFilterServiceList(objCreator(id));
 	}
+
 	handleServiceClick = (e) => {
 		//e.target
-		console.log('e.target', e.target.closest('.service-item').id)
+		console.log('e.target', e.target.closest('.service-item').id);
+		this.props.toggleAppForm();
 
 	}
 	render() {
@@ -42,7 +47,7 @@ class ServicesBlock extends React.Component {
 					<option value={''}>choose your service</option>
 					{
 						serviceTypes.map((el, index) => {
-							
+
 							return <option key={index}>
 								{el}
 							</option>
@@ -54,9 +59,11 @@ class ServicesBlock extends React.Component {
 
 				<div className="services-block">
 					{this.props.filteredServicesList.map((el, index) => (
-						
+
 						<div className={`service-item ${el.type.replace(' ', '')}`}
-						key={index}>
+							key={index}
+							id={el.id}
+							onClick={this.handleServiceClick}>
 							<p>{el.type}</p>
 							<p>{el.price} &#x20bd;</p>
 							<p>{el.company.name}</p>
