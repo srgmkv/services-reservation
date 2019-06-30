@@ -41,42 +41,27 @@ class ServicesBlock extends React.Component {
 				<select className="select-by-type" id="sortByType" onChange={this.handleChange}>
 					<option value={''}>choose your service</option>
 					{
-						serviceTypes.map(el => (
-							<option key={Math.round(Math.random() * 1e8)}>
+						serviceTypes.map((el, index) => {
+							
+							return <option key={index}>
 								{el}
 							</option>
-						))
+						})
 					}
 				</select>
 
 				<input type="text" id="sortByName" onChange={this.handleChange} />
 
 				<div className="services-block">
-<<<<<<< HEAD
-					{
-						this.props.filteredServicesList.map(el => (
-							<div className={`service-item ${el.type.replace(' ', '')}`}
-								key={Math.round(Math.random() * 1e8)}
-								id={el.id}
-								onClick={this.handleServiceClick}
-							>
-								<p>{el.type}</p>
-								<p>{el.price} &#x20bd;</p>
-								<p>{el.company.name}</p>
-							</div>
-						))
-					}
-=======
-					{this.props.filteredServicesList.map(el => (
+					{this.props.filteredServicesList.map((el, index) => (
 						
 						<div className={`service-item ${el.type.replace(' ', '')}`}
-						key={Math.round(Math.random() * 1e8)}>
+						key={index}>
 							<p>{el.type}</p>
 							<p>{el.price} &#x20bd;</p>
 							<p>{el.company.name}</p>
 						</div>
 					))}
->>>>>>> side
 				</div>
 			</>
 		)
