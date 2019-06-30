@@ -1,7 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { toFilterServiceList } from '../state-controls/actions';
-import { toggleAppForm } from '../state-controls/actions';
+import { toFilterServiceList, toggleAppForm } from '../state-controls/actions';
 
 const mapStateToProps = state => {
 	return {

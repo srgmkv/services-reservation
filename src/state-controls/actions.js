@@ -12,6 +12,10 @@ export function toggleAppForm(payload) {
   return { type: types.TOGGLE_APP_FORM, payload }
 };
 
+export function sendDateTime(payload) {
+  return { type: types.SEND_SELECTED_DATE_TIME, payload }
+};
+
 export function getCalendarData() {
   return function (dispatch) {
     return fetch("http://localhost:3000/dates.json")

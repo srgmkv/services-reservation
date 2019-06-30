@@ -26,10 +26,21 @@ const initialState = {
 	},
 	filteredServicesList: [],
 	isReservationFormShown: false,
-	idToReservForm: ''
+	idToReservForm: '',
+	selectedDateTime:
+	{
+		date: '',
+		time: ''
+	}
 };
 
 function rootReducer(state = initialState, action) {
+	if (action.type === types.SEND_SELECTED_DATE_TIME) {
+		return Object.assign({}, state, {
+			selectedDateTime: action.payload
+		});
+	}
+
 
 	if (action.type === types.RESERVE_SERVICE) {
 		return Object.assign({}, state, {
@@ -40,7 +51,6 @@ function rootReducer(state = initialState, action) {
 	if (action.type === types.CALENDAR_DATA_LOADED) {
 		return Object.assign({}, state, {
 			calendar: action.payload
-			
 		});
 	}
 
