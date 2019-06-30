@@ -1,11 +1,11 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { filterByName } from '../state-controls/actions';
+import { toFilterServiceList } from '../state-controls/actions';
 
 const mapStateToProps = state => {
 	return {
 		servicesList: state.servicesList,
-		searchText: state.searchText,
+		filterConditions: state.filterConditions,
 		filteredServicesList: state.filteredServicesList
 	}
 
@@ -13,26 +13,33 @@ const mapStateToProps = state => {
 
 function mapDispatchToProps(dispatch) {
 	return {
-		filterByName: value => dispatch(filterByName(value))
+		toFilterServiceList: value => dispatch(toFilterServiceList(value))
 	};
 }
 
 class ServicesBlock extends React.Component {
 
 	handleChange = (e) => {
-		const value = e.target.value;
-		this.props.filterByName(value);
+		const { value, id } = e.target;
+
+		const objCreator = (property) => (
+			Object.assign({}, this.props.filterConditions, {
+				[property]: value
+			})
+		)
+	
+		this.props.toFilterServiceList(objCreator(id));
 	}
 
 	render() {
 		return (
 			<>
-				<select className="select-by-type">
-					<option>choose your service</option>
+				<select className="select-by-type" id="sortByType" onChange={this.handleChange}>
+					<option value={''}>choose your service</option>
 					{[...new Set(this.props.servicesList.map(el => el.type))].map(el => <option>{el}</option>)}
 				</select>
 
-				<input type="text" id="text" onChange={this.handleChange} />
+				<input type="text" id="sortByName" onChange={this.handleChange} />
 
 				<div className="services-block">
 					{this.props.filteredServicesList.map(el => (
@@ -50,4 +57,4 @@ class ServicesBlock extends React.Component {
 }
 
 
-export default connect(mapStateToProps, mapDispatchToProps )(ServicesBlock);
+export default connect(mapStateToProps, mapDispatchToProps)(ServicesBlock);

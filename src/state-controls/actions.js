@@ -4,8 +4,8 @@ export function reserveService(payload) {
   return { type: types.RESERVE_SERVICE, payload }
 };
 
-export function filterByName(payload) {
-  return { type: types.SEARCH_TEXT, payload }
+export function toFilterServiceList(payload) {
+  return { type: types.FILTER_SERVICE_LIST, payload }
 };
 
 export function getCalendarData() {
