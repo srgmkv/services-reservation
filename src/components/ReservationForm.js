@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { toggleAppForm, sendDateTime, reserveService } from '../state-controls/actions';
+import { toggleAppForm, sendDateTime, reserveService, updateCalendar } from '../state-controls/actions';
+import dfs from './dfs';
 
 
 const mapStateToProps = state => {
@@ -18,7 +19,8 @@ function mapDispatchToProps(dispatch) {
   return {
     toggleAppForm: () => dispatch(toggleAppForm()),
     sendDateTime: (value) => dispatch(sendDateTime(value)),
-    reserveService: (value) => dispatch(reserveService(value))
+    reserveService: (value) => dispatch(reserveService(value)),
+    updateCalendar: (value) => dispatch(updateCalendar(value))
   };
 }
 
@@ -41,19 +43,30 @@ function ReservationForm(props) {
 
   //резервируем услугу
   const reserveTime = () => {
+    const selectedTypeOfService = props.servicesList.filter(el => el.id === serviceId)[0].type;
 
-    const selectedTypeOfService = props.servicesList.filter(el=> el.id === serviceId)[0].type;
+    const dataForUpdateCalendar = {
+      id: serviceId,
+      date: props.selectedDateTime.date,
+      time: props.selectedDateTime.time
+    }
+
     const data = {
       serviceType: selectedTypeOfService,
       date: props.selectedDateTime.date,
       time: props.selectedDateTime.time,
-      id: props.reservedServices.length
+      id: props.reservedServices.length,
+    };
+
+    if (data.date && data.time) {
+      props.reserveService(data);
+      hideReservationForm();
+      props.updateCalendar(dfs(props.calendar, dataForUpdateCalendar))
     }
-    data.date && data.time && props.reserveService(data) && hideReservationForm();
   };
 
   //конструируем выпадающий список дат по выбранной услуге
-  const serviceResevingData  = props.calendar.filter(el => el.id === serviceId)[0].dates
+  const serviceResevingData = props.calendar.filter(el => el.id === serviceId)[0].dates
   const arrayOfDatesToJSX = serviceResevingData.map((el, index) => (
     <option key={index}>{el.date}</option>
   ))

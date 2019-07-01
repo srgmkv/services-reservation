@@ -54,9 +54,10 @@ function rootReducer(state = initialState, action) {
 		});
 	}
 
-	if (action.type === types.CALENDAR_DATA_LOADED) {
+	if (action.type === types.UPDATE_CALENDAR) {
 		return Object.assign({}, state, {
 			calendar: action.payload
+
 		});
 	}
 

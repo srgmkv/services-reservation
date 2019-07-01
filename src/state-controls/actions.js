@@ -16,12 +16,16 @@ export function sendDateTime(payload) {
   return { type: types.SEND_SELECTED_DATE_TIME, payload }
 };
 
+export function updateCalendar(payload) {
+  return { type: types.UPDATE_CALENDAR, payload }
+};
+
 export function getCalendarData() {
   return function (dispatch) {
     return fetch("http://localhost:3000/dates.json")
       .then(response => response.json())
       .then(json => {
-        dispatch({ type: types.CALENDAR_DATA_LOADED, payload: json });
+        dispatch({ type: types.UPDATE_CALENDAR, payload: json });
       });
   };
 }
