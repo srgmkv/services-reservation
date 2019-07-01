@@ -22,14 +22,9 @@ const reservedServiceList = (props) => {
 	const sorted = props.reservedServices.sort((a, b) => new Date(`${b.date} ${b.time}`) - new Date(`${a.date} ${a.time}`))
 
 	const removeService = (item) => {
-		props.cancelService(item.id);
-
-		const dataForUpdateCalendar = {
-			id: item.serviceId,
-			date: item.date,
-			time: item.time
-		}
-
+		const { date, time, id, serviceId } = item
+		props.cancelService(id);
+		const dataForUpdateCalendar = { serviceId, date, time }
 		props.updateCalendar(dfs(props.calendar, dataForUpdateCalendar));
 
 	}

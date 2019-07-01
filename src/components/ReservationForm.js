@@ -46,11 +46,11 @@ function ReservationForm(props) {
   //резервируем услугу
   const reserveTime = () => {
     const selectedTypeOfService = props.servicesList.filter(el => el.id === serviceId)[0].type;
-
+ const { date, time } = props.selectedDateTime;
     const dataForUpdateCalendar = {
-      id: serviceId,
-      date: props.selectedDateTime.date,
-      time: props.selectedDateTime.time
+      serviceId,
+      date,
+      time
     }
 
     const data = {

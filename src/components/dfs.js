@@ -18,7 +18,7 @@ const dfs = (arr, cond) => {
     })
   }
   return arr.map(el => {
-    if (el.id === cond.id) {
+    if (el.id === cond.serviceId) {
       return { id: el.id, dates: byDate(el.dates) }
     }
     return el;
