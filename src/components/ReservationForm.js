@@ -1,7 +1,9 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { toggleAppForm, sendDateTime, reserveService, updateCalendar } from '../state-controls/actions';
+import { toggleAppForm, sendDateTime, reserveService, updateCalendar, toggleModal } from '../state-controls/actions';
 import dfs from './dfs';
+import Modal from './Modal';
+
 
 
 const mapStateToProps = state => {
@@ -11,7 +13,8 @@ const mapStateToProps = state => {
     isReservationFormShown: state.isReservationFormShown,
     idToReservForm: state.idToReservForm,
     selectedDateTime: state.selectedDateTime,
-    servicesList: state.servicesList
+    servicesList: state.servicesList,
+    isModalShown: state.isModalShown
   }
 };
 
@@ -20,14 +23,13 @@ function mapDispatchToProps(dispatch) {
     toggleAppForm: () => dispatch(toggleAppForm()),
     sendDateTime: (value) => dispatch(sendDateTime(value)),
     reserveService: (value) => dispatch(reserveService(value)),
-    updateCalendar: (value) => dispatch(updateCalendar(value))
+    updateCalendar: (value) => dispatch(updateCalendar(value)),
+    toggleModal: () => dispatch(toggleModal())
   };
 }
 
 function ReservationForm(props) {
-  const serviceId = props.idToReservForm;
-
-  const hideReservationForm = () => props.toggleAppForm();
+  const serviceId = props.idToReservForm.id;
 
   //обработчик селектов: добавляем выбранную дату и время в состояние
   const handleSelect = e => {
@@ -55,13 +57,16 @@ function ReservationForm(props) {
       serviceType: selectedTypeOfService,
       date: props.selectedDateTime.date,
       time: props.selectedDateTime.time,
+      company: props.idToReservForm.name,
       id: props.reservedServices.length,
+      serviceId: serviceId
     };
 
     if (data.date && data.time) {
       props.reserveService(data);
-      hideReservationForm();
-      props.updateCalendar(dfs(props.calendar, dataForUpdateCalendar))
+      //props.toggleAppForm();
+      props.updateCalendar(dfs(props.calendar, dataForUpdateCalendar));
+      props.toggleModal();
     }
   };
 
@@ -76,7 +81,7 @@ function ReservationForm(props) {
   const timesToSelect = serviceResevingData.filter(el => el.date === date)[0]
   let arrayOfTimesToJSX;
   if (props.selectedDateTime.date) {
-    arrayOfTimesToJSX = timesToSelect.times.filter(el => el.isBlocked)
+    arrayOfTimesToJSX = timesToSelect.times.filter(el => !el.isBlocked)
       .map((el, index) => (
         <option key={index}>{el.value}</option>
       ))
@@ -84,7 +89,8 @@ function ReservationForm(props) {
 
   return (
     <div className="reservation-form">
-      <button id="cancel" onClick={hideReservationForm}>Cancel</button>
+
+      <button id="cancel" onClick={props.toggleAppForm}>Cancel</button>
 
       <select className="date-select" id="date" onChange={handleSelect} >
         <option value={''}>choose date</option>
@@ -92,15 +98,14 @@ function ReservationForm(props) {
       </select>
 
       <select className="time-select" id="time"
-        disabled={!props.selectedDateTime.date}
-        onChange={handleSelect}
+        disabled={!props.selectedDateTime.date} onChange={handleSelect}
       >
         <option value={''}>choose time</option>
         {arrayOfTimesToJSX}
       </select>
 
       <button id="reserve" onClick={reserveTime}>Reserve</button>
-
+     {props.isModalShown && <Modal />}
     </div>
   )
 

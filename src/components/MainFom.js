@@ -1,9 +1,8 @@
 import React from 'react';
-
 import ServicesBlock from './ServicesBlock';
 import List from './List';
 
-const MainForm = () => {
+const MainForm = (props) => {
   return (
     <div className="App">
       <List />

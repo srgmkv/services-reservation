@@ -11,13 +11,12 @@ const mapStateToProps = state => {
 	}
 };
 
-function mapDispatchToProps(dispatch) {
+/* function mapDispatchToProps(dispatch) {
 	return {
 		toFilterServiceList: value => dispatch(toFilterServiceList(value)),
 		toggleAppForm: (value) => dispatch(toggleAppForm(value))
-
 	};
-}
+} */
 
 class ServicesBlock extends React.Component {
 
@@ -33,9 +32,11 @@ class ServicesBlock extends React.Component {
 		this.props.toFilterServiceList(objCreator(id));
 	}
 
-	handleClickByServiceItem = (e) => {
-		const data = e.target.closest('.service-item').id
-		console.log('data', data)
+	handleClickByServiceItem = (elem) => {
+		const data = {
+			id: elem.id,
+			name: elem.company.name
+		}
 		this.props.toggleAppForm(data);
 	}
 
@@ -57,8 +58,7 @@ class ServicesBlock extends React.Component {
 
 						<div className={`service-item ${el.type.replace(' ', '')}`}
 							key={index}
-							id={el.id}
-							onClick={this.handleClickByServiceItem}>
+							onClick={() => this.handleClickByServiceItem(el)}>
 							<p>{el.type}</p>
 							<p>{el.price} &#x20bd;</p>
 							<p>{el.company.name}</p>
@@ -71,4 +71,4 @@ class ServicesBlock extends React.Component {
 	}
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(ServicesBlock);
+export default connect(mapStateToProps, { toFilterServiceList, toggleAppForm })(ServicesBlock);

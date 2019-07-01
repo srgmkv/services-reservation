@@ -2,24 +2,27 @@ import * as types from './action-types';
 
 const initialState = {
 	reservedServices: [
-		{
+		/*{
 			serviceType: 'hair styling',
+			company: 'Glyph Salon',
 			date: '01-06-2019',
 			time: '19:00',
 			id: 0
 		},
 		{
 			serviceType: 'make up',
+			company: 'Makeup Mandy',
 			date: '02-06-2019',
 			time: '13:00',
 			id: 1
 		},
 		{
 			serviceType: 'skin care',
+			company: 'Care of you',
 			date: '01-06-2019',
 			time: '15:00',
 			id: 2
-		}
+		}*/
 	],
 	calendar: {},
 	servicesList: [],
@@ -29,6 +32,7 @@ const initialState = {
 	},
 	filteredServicesList: [],
 	isReservationFormShown: false,
+	isModalShown: false,
 	idToReservForm: '',
 	selectedDateTime:
 	{
@@ -49,7 +53,16 @@ function rootReducer(state = initialState, action) {
 	if (action.type === types.RESERVE_SERVICE) {
 		return Object.assign({}, state, {
 			reservedServices: state.reservedServices.concat(action.payload),
-			selectedDateTime: { date: '', time: '' }
+			selectedDateTime: { date: '', time: '' },
+			filteredServicesList: state.servicesList
+
+		});
+	}
+
+	if (action.type === types.CANCEL_SERVICE) {
+		return Object.assign({}, state, {
+			reservedServices: state.reservedServices
+				.filter(el => el.id !== action.payload)
 
 		});
 	}
@@ -91,7 +104,15 @@ function rootReducer(state = initialState, action) {
 		return {
 			...state,
 			isReservationFormShown: !state.isReservationFormShown,
-			idToReservForm: action.payload || ''
+			idToReservForm: action.payload || '',
+			filteredServicesList: state.servicesList
+		}
+	}
+
+	if (action.type === types.TOGGLE_MODAL) {
+		return {
+			...state,
+			isModalShown: !state.isModalShown
 		}
 	}
 
