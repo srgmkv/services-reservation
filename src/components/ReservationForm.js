@@ -11,7 +11,7 @@ const mapStateToProps = state => {
     reservedServices: state.reservedServices,
     calendar: state.calendar,
     isReservationFormShown: state.isReservationFormShown,
-    idToReservForm: state.idToReservForm,
+    dataToResForm: state.dataToResForm,
     selectedDateTime: state.selectedDateTime,
     servicesList: state.servicesList,
     isModalShown: state.isModalShown
@@ -29,15 +29,15 @@ function mapDispatchToProps(dispatch) {
 }
 
 function ReservationForm(props) {
-  const serviceId = props.idToReservForm.id;
+  const { serviceId, company, serviceType } = props.dataToResForm;
+  const { date, time } = props.selectedDateTime;
 
   //обработчик селектов: добавляем выбранную дату и время в состояние
   const handleSelect = e => {
     const { value, id } = e.target;
     const objCreator = (property) => (
       {
-        ...props.selectedDateTime,
-        [property]: value
+        ...props.selectedDateTime, [property]: value
       }
     );
     props.sendDateTime(objCreator(id));
@@ -45,21 +45,15 @@ function ReservationForm(props) {
 
   //резервируем услугу
   const reserveTime = () => {
-    const selectedTypeOfService = props.servicesList.filter(el => el.id === serviceId)[0].type;
- const { date, time } = props.selectedDateTime;
+    //const serviceType = props.servicesList.filter(el => el.id === serviceId)[0].type;
+
     const dataForUpdateCalendar = {
-      serviceId,
-      date,
-      time
+      serviceId, date, time
     }
 
     const data = {
-      serviceType: selectedTypeOfService,
-      date: props.selectedDateTime.date,
-      time: props.selectedDateTime.time,
-      company: props.idToReservForm.name,
-      id: props.reservedServices.length,
-      serviceId: serviceId
+      serviceType, date, time, serviceId, company,
+      id: props.reservedServices.length
     };
 
     if (data.date && data.time) {
@@ -77,7 +71,6 @@ function ReservationForm(props) {
   ))
 
   //конструируем выпадающий список со временем записи
-  const { date } = props.selectedDateTime;
   const timesToSelect = serviceResevingData.filter(el => el.date === date)[0]
   let arrayOfTimesToJSX;
   if (props.selectedDateTime.date) {
@@ -105,7 +98,7 @@ function ReservationForm(props) {
       </select>
 
       <button id="reserve" onClick={reserveTime}>Reserve</button>
-     {props.isModalShown && <Modal />}
+      {props.isModalShown && <Modal />}
     </div>
   )
 

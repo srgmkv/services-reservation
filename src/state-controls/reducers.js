@@ -33,7 +33,7 @@ const initialState = {
 	filteredServicesList: [],
 	isReservationFormShown: false,
 	isModalShown: false,
-	idToReservForm: '',
+	dataToResForm: '',
 	selectedDateTime:
 	{
 		date: '',
@@ -104,7 +104,7 @@ function rootReducer(state = initialState, action) {
 		return {
 			...state,
 			isReservationFormShown: !state.isReservationFormShown,
-			idToReservForm: action.payload || '',
+			dataToResForm: action.payload || '',
 			filteredServicesList: state.servicesList
 		}
 	}

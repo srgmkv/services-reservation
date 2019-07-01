@@ -34,8 +34,9 @@ class ServicesBlock extends React.Component {
 
 	handleClickByServiceItem = (elem) => {
 		const data = {
-			id: elem.id,
-			name: elem.company.name
+			serviceId: elem.id,
+			company: elem.company.name,
+			serviceType: elem.type
 		}
 		this.props.toggleAppForm(data);
 	}
