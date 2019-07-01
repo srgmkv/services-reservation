@@ -6,12 +6,21 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+html, body {
+  height: 100%;
+}
 body {
   max-width: 700px;
-  margin: 5px auto;
+  margin: 0 auto;
 }
-
+#root {
+  height: 100%;
+}
+.App {
+  height: 100%;
+}
 .services-block {
+  border: 1px dotted rgb(60, 255, 0);
   display: flex;
   flex-wrap: wrap;
 }
@@ -37,6 +46,7 @@ p {
   color: white;
   padding: 3px 5px;
   border-radius: 7px;
+  margin-top: 5px;
 }
 
 .select-by-type {
@@ -77,6 +87,3 @@ p {
   display: block;
 }
 
-.modal {
-  
-}

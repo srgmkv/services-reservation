@@ -1,0 +1,16 @@
+
+.reservation-form {
+  border: 1px dotted yellow;
+  box-sizing: border-box;
+  justify-content: center;
+  display: flex;
+  height: 100%;
+}
+
+.reservation-form-container {
+  margin: auto;
+  border: 1px dotted yellow;
+}
+.modal {
+  
+}
