@@ -31,6 +31,7 @@ function mapDispatchToProps(dispatch) {
 function ReservationForm(props) {
   const { serviceId, company, serviceType } = props.dataToResForm;
   const { date, time } = props.selectedDateTime;
+  const id = props.reservedServices.length
 
   //обработчик селектов: добавляем выбранную дату и время в состояние
   const handleSelect = e => {
@@ -45,62 +46,56 @@ function ReservationForm(props) {
 
   //резервируем услугу
   const reserveTime = () => {
-    //const serviceType = props.servicesList.filter(el => el.id === serviceId)[0].type;
-
-    const dataForUpdateCalendar = {
-      serviceId, date, time
-    }
 
     const data = {
-      serviceType, date, time, serviceId, company,
-      id: props.reservedServices.length
-    };
-
-    if (data.date && data.time) {
-      props.reserveService(data);
-      //props.toggleAppForm();
-      props.updateCalendar(dfs(props.calendar, dataForUpdateCalendar));
-      props.toggleModal();
+      date, time, serviceId, serviceType, company, id
     }
-  };
 
-  //конструируем выпадающий список дат по выбранной услуге
-  const serviceResevingData = props.calendar.filter(el => el.id === serviceId)[0].dates
-  const arrayOfDatesToJSX = serviceResevingData.map((el, index) => (
-    <option key={index}>{el.date}</option>
-  ))
-
-  //конструируем выпадающий список со временем записи
-  const timesToSelect = serviceResevingData.filter(el => el.date === date)[0]
-  let arrayOfTimesToJSX;
-  if (props.selectedDateTime.date) {
-    arrayOfTimesToJSX = timesToSelect.times.filter(el => !el.isBlocked)
-      .map((el, index) => (
-        <option key={index}>{el.value}</option>
-      ))
+  if (date && time) {
+    props.reserveService(data);
+    //props.toggleAppForm();
+    props.updateCalendar(dfs(props.calendar, data));
+    props.toggleModal();
   }
+};
 
-  return (
-    <div className="reservation-form">
+//конструируем выпадающий список дат по выбранной услуге
+const serviceResevingData = props.calendar.filter(el => el.id === serviceId)[0].dates
+const arrayOfDatesToJSX = serviceResevingData.map((el, index) => (
+  <option key={index}>{el.date}</option>
+))
 
-      <button id="cancel" onClick={props.toggleAppForm}>Cancel</button>
+//конструируем выпадающий список со временем записи
+const timesToSelect = serviceResevingData.filter(el => el.date === date)[0]
+let arrayOfTimesToJSX;
+if (props.selectedDateTime.date) {
+  arrayOfTimesToJSX = timesToSelect.times.filter(el => !el.isBlocked)
+    .map((el, index) => (
+      <option key={index}>{el.value}</option>
+    ))
+}
 
-      <select className="date-select" id="date" onChange={handleSelect} >
-        <option value={''}>choose date</option>
-        {arrayOfDatesToJSX}
-      </select>
+return (
+  <div className="reservation-form">
 
-      <select className="time-select" id="time"
-        disabled={!props.selectedDateTime.date} onChange={handleSelect}
-      >
-        <option value={''}>choose time</option>
-        {arrayOfTimesToJSX}
-      </select>
+    <button id="cancel" onClick={props.toggleAppForm}>Cancel</button>
 
-      <button id="reserve" onClick={reserveTime}>Reserve</button>
-      {props.isModalShown && <Modal />}
-    </div>
-  )
+    <select className="date-select" id="date" onChange={handleSelect} >
+      <option value={''}>choose date</option>
+      {arrayOfDatesToJSX}
+    </select>
+
+    <select className="time-select" id="time"
+      disabled={!props.selectedDateTime.date} onChange={handleSelect}
+    >
+      <option value={''}>choose time</option>
+      {arrayOfTimesToJSX}
+    </select>
+
+    <button id="reserve" onClick={reserveTime}>Reserve</button>
+    {props.isModalShown && <Modal />}
+  </div>
+)
 
 }
 

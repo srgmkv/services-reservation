@@ -1,29 +1,7 @@
 import * as types from './action-types';
 
 const initialState = {
-	reservedServices: [
-		/*{
-			serviceType: 'hair styling',
-			company: 'Glyph Salon',
-			date: '01-06-2019',
-			time: '19:00',
-			id: 0
-		},
-		{
-			serviceType: 'make up',
-			company: 'Makeup Mandy',
-			date: '02-06-2019',
-			time: '13:00',
-			id: 1
-		},
-		{
-			serviceType: 'skin care',
-			company: 'Care of you',
-			date: '01-06-2019',
-			time: '15:00',
-			id: 2
-		}*/
-	],
+	reservedServices: [],
 	calendar: {},
 	servicesList: [],
 	filterConditions: {
@@ -105,7 +83,8 @@ function rootReducer(state = initialState, action) {
 			...state,
 			isReservationFormShown: !state.isReservationFormShown,
 			dataToResForm: action.payload || '',
-			filteredServicesList: state.servicesList
+			filteredServicesList: state.servicesList,
+			selectedDateTime: { date: '', time: '' },
 		}
 	}
 
