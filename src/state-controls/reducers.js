@@ -5,17 +5,20 @@ const initialState = {
 		{
 			serviceType: 'hair styling',
 			date: '01-06-2019',
-			time: '19:00'
+			time: '19:00',
+			id: 0
 		},
 		{
 			serviceType: 'make up',
 			date: '02-06-2019',
-			time: '13:00'
+			time: '13:00',
+			id: 1
 		},
 		{
 			serviceType: 'skin care',
 			date: '01-06-2019',
-			time: '15:00'
+			time: '15:00',
+			id: 2
 		}
 	],
 	calendar: {},
@@ -35,7 +38,7 @@ const initialState = {
 };
 
 function rootReducer(state = initialState, action) {
-	
+
 	if (action.type === types.SEND_SELECTED_DATE_TIME) {
 		return Object.assign({}, state, {
 			selectedDateTime: action.payload
@@ -45,7 +48,9 @@ function rootReducer(state = initialState, action) {
 
 	if (action.type === types.RESERVE_SERVICE) {
 		return Object.assign({}, state, {
-			reservedServices: state.reservedServices.concat(action.payload)
+			reservedServices: state.reservedServices.concat(action.payload),
+			selectedDateTime: { date: '', time: '' }
+
 		});
 	}
 
@@ -86,9 +91,7 @@ function rootReducer(state = initialState, action) {
 			...state,
 			isReservationFormShown: !state.isReservationFormShown,
 			idToReservForm: action.payload || ''
-
 		}
-
 	}
 
 	return state;

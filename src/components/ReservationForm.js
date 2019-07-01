@@ -5,6 +5,7 @@ import { toggleAppForm, sendDateTime, reserveService } from '../state-controls/a
 
 const mapStateToProps = state => {
   return {
+    reservedServices: state.reservedServices,
     calendar: state.calendar,
     isReservationFormShown: state.isReservationFormShown,
     idToReservForm: state.idToReservForm,
@@ -40,14 +41,15 @@ function ReservationForm(props) {
 
   //резервируем услугу
   const reserveTime = () => {
+
     const selectedTypeOfService = props.servicesList.filter(el=> el.id === serviceId)[0].type;
     const data = {
       serviceType: selectedTypeOfService,
       date: props.selectedDateTime.date,
-      time: props.selectedDateTime.time
+      time: props.selectedDateTime.time,
+      id: props.reservedServices.length
     }
-    props.reserveService(data);
-    hideReservationForm();
+    data.date && data.time && props.reserveService(data) && hideReservationForm();
   };
 
   //конструируем выпадающий список дат по выбранной услуге
