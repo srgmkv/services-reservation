@@ -2,8 +2,8 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { toggleAppForm, sendDateTime, reserveService, updateCalendar, toggleModal } from '../state-controls/actions';
 import dfs from './dfs';
-import Modal from './Modal';
-import FormComponent from './FormComponent';
+import Modal from '../components/Modal';
+import FormComponent from '../components/FormComponent';
 import '../ReservationForm.css'
 
 //  ФОРМА ЗАПИСИ НА УСЛУГУ

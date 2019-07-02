@@ -1,6 +1,6 @@
 import React from 'react';
-import ServicesBlock from './ServicesBlock';
-import List from './List';
+import ServicesBlock from '../containers/ServicesBlock';
+import List from '../containers/ListOfReserved';
 
 const MainForm = () => {
   return (

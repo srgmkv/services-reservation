@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 import MainForm from '../components/MainFom';
-import ReservationForm from '../components/ReservationForm';
+import ReservationForm from '../containers/ReservationForm';
 import { getCalendarData, getServiceListData } from '../state-controls/actions';
 
 const mapStateToProps = state => {

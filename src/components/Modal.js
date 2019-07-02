@@ -9,11 +9,7 @@ const mapStateToProps = state => {
   }
 };
 
-
-
 const Modal = (props) => {
-  //const { date, time, serviceType, company }
-  console.log('props.reservedServices', props.reservedServices)
   const closeForm = () => {
     props.toggleAppForm();
     props.toggleModal();
