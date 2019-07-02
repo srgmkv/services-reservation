@@ -26,7 +26,7 @@ const Modal = (props) => {
         <div className="info">
           <div>{reservedServiceData.serviceType.toUpperCase()} in {reservedServiceData.company}</div>
           <div>on <span>
-              {reservedServiceData.date.replace(/-/gi, ' ')}
+              {reservedServiceData.date.replace(/-/gi, '.')}
             
             </span> at <span>{reservedServiceData.time}</span>
           </div>
