@@ -1,4 +1,4 @@
-const dfs = (arr, cond) => {
+const updateCalFunc = (arr, cond) => {
   const byTimes = (arr) => {
     console.log('inner: ', arr);
     return arr.map(el => {
@@ -24,4 +24,4 @@ const dfs = (arr, cond) => {
     return el;
   })
 }
-export default dfs;
+export default updateCalFunc;

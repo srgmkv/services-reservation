@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { toggleAppForm, sendDateTime, reserveService, updateCalendar, toggleModal } from '../state-controls/actions';
-import dfs from './dfs';
+import updateCalFunc from './updateCalFunc';
 import Modal from '../components/Modal';
 import FormComponent from '../components/FormComponent';
 import '../ReservationForm.css'
@@ -51,7 +51,7 @@ const ReservationForm = (props) => {
 
     if (date && time) { // валидация на заполненность всех полей (дата и время)
       props.reserveService(data); // обновляем список забронированных услуг
-      props.updateCalendar(dfs(props.calendar, data)); // обновляем данные в календаре доступных услуг
+      props.updateCalendar(updateCalFunc(props.calendar, data)); // обновляем данные в календаре доступных услуг
       props.toggleModal(); // загружаем модальное окно
     }
   };

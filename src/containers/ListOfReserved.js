@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { cancelService, updateCalendar } from '../state-controls/actions';
-import dfs from './dfs';
+import updateCalFunc from './updateCalFunc';
 
 
 const mapStateToProps = state => {
@@ -23,7 +23,7 @@ const reservedServiceList = (props) => {
 
 	const removeService = (item) => {
 		props.cancelService(item.id);
-		props.updateCalendar(dfs(props.calendar, item));
+		props.updateCalendar(updateCalFunc(props.calendar, item));
 	}
 
 	return (
