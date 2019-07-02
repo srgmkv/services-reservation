@@ -1,71 +1,55 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { toFilterServiceList, toggleAppForm } from '../state-controls/actions';
+import ListOfServices from './ListOfServices';
+import Select from './Select';
 
 const mapStateToProps = state => {
 	return {
 		servicesList: state.servicesList,
 		filterConditions: state.filterConditions,
-		filteredServicesList: state.filteredServicesList,
-		isReservationFormShown: state.isReservationFormShown
+		filteredServicesList: state.filteredServicesList
 	}
 };
 
-/* function mapDispatchToProps(dispatch) {
-	return {
-		toFilterServiceList: value => dispatch(toFilterServiceList(value)),
-		toggleAppForm: (value) => dispatch(toggleAppForm(value))
-	};
-} */
-
 class ServicesBlock extends React.Component {
 
+	// обработка изменения элементов (для фильтрации):
+	// клик на элемент списка с типом услуг; поле поиска услуги по названию
+	// по значению данных полей фильтруем представленные услуги  
 	handleChange = (e) => {
 		const { value, id } = e.target;
-
-		const objCreator = (property) => (
-			{
-				...this.props.filterConditions,
-				[property]: value
-			}
-		);
-		this.props.toFilterServiceList(objCreator(id));
+	  //передаем данные в редьюсер для фильтрации
+		this.props.toFilterServiceList({...this.props.filterConditions, [id]: value}); 
 	}
 
-	handleClickByServiceItem = (elem) => {
+	handleClickByServiceItem = (elem) => { //обработка клика по услуге
 		const data = {
 			serviceId: elem.id,
 			company: elem.company.name,
 			serviceType: elem.type
 		}
-		this.props.toggleAppForm(data);
+		this.props.toggleAppForm(data); //передаем объект с данными услуги в редъюсер и для формы бронирования
 	}
 
 	render() {
+		// для выпадающего списка сделам массив уникальный значений типов услуг для дальнейщей фильтрации
 		const serviceTypes = [...new Set(this.props.servicesList.map(el => el.type))];
 		return (
 			<>
-				<select className="select-by-type" id="sortByType" onChange={this.handleChange}>
-					<option value={''}>choose your service</option>
-					{
-						serviceTypes.map((el, index) => <option key={index}>{el}</option>)
-					}
-				</select>
+				<Select name="sortByType"
+					onChange={this.handleChange}
+					header="choose your service"
+					items={serviceTypes}
+				/>
 
 				<input type="text" id="sortByName" onChange={this.handleChange} />
 
-				<div className="services-block">
-					{this.props.filteredServicesList.map((el, index) => (
+				<ListOfServices
+					items={this.props.filteredServicesList}
+					onClick={this.handleClickByServiceItem}
+				/>
 
-						<div className={`service-item ${el.type.replace(' ', '')}`}
-							key={index}
-							onClick={() => this.handleClickByServiceItem(el)}>
-							<p>{el.type}</p>
-							<p>{el.price} &#x20bd;</p>
-							<p>{el.company.name}</p>
-						</div>
-					))}
-				</div>
 			</>
 		)
 

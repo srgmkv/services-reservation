@@ -33,7 +33,7 @@ const reservedServiceList = (props) => {
 			{sorted
 				.map(el => (
 					<div className="reserved-item" id={el.id}
-						key={Math.round(Math.random() * 1e8)}>
+						key={el.id}>
 						{el.serviceType} {el.company} {el.date} {el.time}
 						<span className="cancel" onClick={() => removeService(el)}>cancel</span>
 					</div>

@@ -3,15 +3,14 @@ import { connect } from 'react-redux';
 import { toggleAppForm, sendDateTime, reserveService, updateCalendar, toggleModal } from '../state-controls/actions';
 import dfs from './dfs';
 import Modal from './Modal';
+import FormComponent from './FormComponent';
 import '../ReservationForm.css'
 
-
-
-const mapStateToProps = state => {
+//  ФОРМА ЗАПИСИ НА УСЛУГУ
+const mapStateToProps = state => { //состояние из стора для текущего компонента
   return {
     reservedServices: state.reservedServices,
     calendar: state.calendar,
-    isReservationFormShown: state.isReservationFormShown,
     dataToResForm: state.dataToResForm,
     selectedDateTime: state.selectedDateTime,
     servicesList: state.servicesList,
@@ -19,7 +18,7 @@ const mapStateToProps = state => {
   }
 };
 
-function mapDispatchToProps(dispatch) {
+function mapDispatchToProps(dispatch) { //функции, которые будут передавать значения в редьюсеры
   return {
     toggleAppForm: () => dispatch(toggleAppForm()),
     sendDateTime: (value) => dispatch(sendDateTime(value)),
@@ -29,7 +28,9 @@ function mapDispatchToProps(dispatch) {
   };
 }
 
-function ReservationForm(props) {
+//САМ КОМПОНЕНТ:
+const ReservationForm = (props) => {
+  //из стейта возьмем значения:
   const { serviceId, company, serviceType } = props.dataToResForm;
   const { date, time } = props.selectedDateTime;
   const id = props.reservedServices.length
@@ -37,39 +38,34 @@ function ReservationForm(props) {
   //обработчик селектов: добавляем выбранную дату и время в состояние
   const handleSelect = e => {
     const { value, id } = e.target;
-    const objCreator = (property) => (
-      {
-        ...props.selectedDateTime, [property]: value
-      }
-    );
-    props.sendDateTime(objCreator(id));
+    props.sendDateTime({                // передаем в редъюсер выбранную дату/время
+      ...props.selectedDateTime, [id]: value
+    });
   };
 
   //резервируем услугу
   const reserveTime = () => {
-
     const data = {
       date, time, serviceId, serviceType, company, id
     }
 
-    if (date && time) {
-      props.reserveService(data);
-      //props.toggleAppForm();
-      props.updateCalendar(dfs(props.calendar, data));
-      props.toggleModal();
+    if (date && time) { // валидация на заполненность всех полей (дата и время)
+      props.reserveService(data); // обновляем список забронированных услуг
+      props.updateCalendar(dfs(props.calendar, data)); // обновляем данные в календаре доступных услуг
+      props.toggleModal(); // загружаем модальное окно
     }
   };
 
-  //конструируем выпадающий список дат по выбранной услуге
-  const serviceResevingData = props.calendar.filter(el => el.id === serviceId)[0].dates
-  const arrayOfDatesToJSX = serviceResevingData.map((el, index) => (
+  //извлекаем данные для списка дат по выбранной услуг, фильтруем календарь
+  const serviceAvaliabiltyData = props.calendar.filter(el => el.id === serviceId)[0].dates
+  const arrayOfDatesToJSX = serviceAvaliabiltyData.map((el, index) => (
     <option key={index}>{el.date}</option>
   ))
 
-  //конструируем выпадающий список со временем записи
-  const timesToSelect = serviceResevingData.filter(el => el.date === date)[0]
+  //извлекаем данные для списка со временем записи
+  const timesToSelect = serviceAvaliabiltyData.filter(el => el.date === date)[0]
   let arrayOfTimesToJSX;
-  if (props.selectedDateTime.date) {
+  if (props.selectedDateTime.date) {// проверяем, чтобы список дат был загружен
     arrayOfTimesToJSX = timesToSelect.times.filter(el => !el.isBlocked)
       .map((el, index) => (
         <option key={index}>{el.value}</option>
@@ -77,26 +73,19 @@ function ReservationForm(props) {
   }
 
   return (
-    <div className="reservation-form">
-      <div className="reservation-form-container">
-        <button id="cancel" onClick={props.toggleAppForm}>Cancel</button>
+    <>
+      {props.isModalShown && <Modal />}
 
-        <select className="date-select" id="date" onChange={handleSelect} >
-          <option value={''}>choose date</option>
-          {arrayOfDatesToJSX}
-        </select>
-
-        <select className="time-select" id="time"
-          disabled={!props.selectedDateTime.date} onChange={handleSelect}
-        >
-          <option value={''}>choose time</option>
-          {arrayOfTimesToJSX}
-        </select>
-
-        <button id="reserve" onClick={reserveTime}>Reserve</button>
-        {props.isModalShown && <Modal />}
-      </div>
-    </div>
+      <FormComponent
+        cancelClick={props.toggleAppForm}
+        reserveClick={reserveTime}
+        displayStyle={props.isModalShown}
+        handleSelect={handleSelect}
+        dates={arrayOfDatesToJSX}
+        times={arrayOfTimesToJSX}
+        disabledTimeSelect={!props.selectedDateTime.date}
+      />
+    </>
   )
 }
 

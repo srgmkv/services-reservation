@@ -1,13 +1,13 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-import MainForm from './MainFom';
-import ReservationForm from './ReservationForm';
+import MainForm from '../components/MainFom';
+import ReservationForm from '../components/ReservationForm';
 import { getCalendarData, getServiceListData } from '../state-controls/actions';
 
 const mapStateToProps = state => {
 	return {
-		isReservationFormShown: state.isReservationFormShown
+		resFormShown: state.isReservationFormShown
 	}
 };
 
@@ -21,7 +21,7 @@ class App extends React.Component {
 	render() {
 		return (
 			<div className="App">
-				{this.props.isReservationFormShown ? < ReservationForm /> : <MainForm />}
+				{this.props.resFormShown ? < ReservationForm /> : <MainForm />}
 			</div>
 			);
 		}

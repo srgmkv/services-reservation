@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { toggleModal, toggleAppForm } from '../state-controls/actions';
+import '../Modal.css'
 
 const mapStateToProps = state => {
   return {
@@ -11,6 +12,7 @@ const mapStateToProps = state => {
 
 
 const Modal = (props) => {
+  //const { date, time, serviceType, company }
   console.log('props.reservedServices', props.reservedServices)
   const closeForm = () => {
     props.toggleAppForm();
@@ -18,11 +20,13 @@ const Modal = (props) => {
   }
   const reservedServiceData = props.reservedServices.filter((el, ind, arr) => el.id === arr.length - 1)[0]
   return (
-    <div>
-      {reservedServiceData.serviceType} 
-      {reservedServiceData.date} 
-      {reservedServiceData.time}
-      <button onClick={closeForm}>close</button>
+    <div className="modal">
+      <div className="container">
+        {reservedServiceData.serviceType}
+        {reservedServiceData.date}
+        {reservedServiceData.time}
+        <button onClick={closeForm}>close</button>
+      </div>
     </div>
   )
 }

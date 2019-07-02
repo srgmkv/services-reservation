@@ -4,7 +4,7 @@ import { Provider } from "react-redux";
 import './index.css'
 
 import './index.css';
-import App from './components/App';
+import App from './containers/App';
 //import "./state-controls/index";
 import store from './state-controls/store';
 

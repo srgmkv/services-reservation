@@ -32,6 +32,11 @@ body {
   margin: 0 0 5px 5px;
 }
 
+.service-item:hover {
+  background-color: rgba(255, 255, 255, 0.959);
+  border: 2px solid rgb(255, 123, 0);
+}
+
 p {
   margin: 5px;
 }
@@ -49,10 +54,10 @@ p {
   margin-top: 5px;
 }
 
-.select-by-type {
+#sortByType{
   margin-bottom: 7px;
 }
-#reserved-list-header, .select-by-type, .reserved-item {
+#reserved-list-header, #sortByType, .reserved-item {
   margin-left: 5px;
 }
 
