@@ -1,16 +1,17 @@
 
 .reserved-services-list {
-  margin-bottom: 2px;;
+  margin-bottom: 2px;
+    max-width: 500px;
 }
 .reserved-item {
   display: flex;
   margin-left: 5px;
+  margin-right: 5px;
 }
 
 .reserved-item div {
   padding: 1px 5px;
   margin-bottom: 2px;
-  
   display: flex;
   align-items: center;
 }
@@ -20,7 +21,7 @@
   padding: 2px 0 0 5px;
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
-  flex-direction: column
+  flex-direction: column;
 }
 .reserved-item .date div:last-child {
   font-size: 12px;
@@ -43,9 +44,11 @@
 .reserved-item .cancel {
   background-color: rgb(250, 102, 102);
   font-size: 12px;
-  padding: 0;
+  padding: 0 3px;
   color: beige;
   font-weight: 700;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
 
 #reserved-list-header {

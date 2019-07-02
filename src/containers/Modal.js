@@ -8,7 +8,7 @@ const mapStateToProps = state => {
     reservedServices: state.reservedServices,
   }
 };
-
+//Компонент отображения модального окна, содержит совсем немного логики
 const Modal = (props) => {
   //обработчик закрывает модальное окно и форму бронирования
   const closeForm = () => {

@@ -6,7 +6,7 @@ import Modal from './Modal';
 import FormComponent from '../components/FormComponent';
 import '../ Styles/ReservationForm.css'
 
-//  ФОРМА ЗАПИСИ НА УСЛУГУ
+//  Компонент формы записи на услугу
 const mapStateToProps = state => { //состояние из стора для текущего компонента
   return {
     reservedServices: state.reservedServices,
@@ -65,7 +65,7 @@ const ReservationForm = (props) => {
   //извлекаем данные для списка со временем записи
   const timesToSelect = serviceAvaliabiltyData.filter(el => el.date === date)[0]
   let arrayOfTimesToJSX;
-  if (props.selectedDateTime.date) {// проверяем, чтобы список дат был загружен
+  if (props.selectedDateTime.date) {// проверяем, чтобы список дат был не пуст до передачи в компонент
     arrayOfTimesToJSX = timesToSelect.times.filter(el => !el.isBlocked)
       .map((el, index) => (
         <option key={index}>{el.value}</option>

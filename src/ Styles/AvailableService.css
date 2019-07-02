@@ -3,11 +3,9 @@
   font-size: 16px;
   padding: 10px 10px;
   max-width: 170px;
-
-  border:0;
+  border: 0;
   border: 1px rgb(202, 43, 43) solid;
   border-radius: 5px;
-  
 }
 
 #sortByType {
@@ -17,63 +15,92 @@
   margin-left: 5px;
   font-stretch: ultra-expanded;
   background-color: rgb(255, 255, 255);
-
   border: 1px rgb(202, 43, 43) solid;
   border-radius: 3px;
-
 }
+
 .inputs {
   display: flex;
-  margin: 0px 0 5px;;
+  margin: 0px 0 5px;
+  ;
   align-items: baseline;
 }
 
 .services-block {
   display: flex;
   flex-wrap: wrap;
+  align-items: stretch;
+  align-content: space-evenly;
+  margin-right: 5px;
 }
 
 .service-item {
   border: 2px solid rgb(202, 43, 43);
   border-radius: 4px;
-  width: 109px;
-  height: 100px;
+  width: 113px;
+  height: 113px;
   margin: 0 0 5px 5px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.service-item div {
+  display: flex;
+  flex-direction: column;
+}
+
+.service-item .price {
+  flex-grow: 1;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.service-item .type {
+  padding: 5px;
+}
+
+.service-item .company {
+  background-color: rgba(230, 227, 227, 0.397);
+  padding: 3px;
+}
+
+.service-item .price div {
+  margin: auto;
+}
+
+.service-item div{
+  text-align: center;
 }
 
 .service-item:hover {
-  background-color: rgba(255, 255, 255, 0.959);
-  border: 2px solid rgb(255, 123, 0);
+  border: 3px solid rgb(38, 0, 255);
 }
 
-p {
-  margin: 5px;
-}
-
-.haircoloring {
+.haircoloring .type {
   background-color: rgba(8, 235, 235, 0.3);
 }
 
-.hairstyling {
+.hairstyling .type {
   background-color: rgba(163, 8, 235, 0.3);
 }
 
-.makeup {
+.makeup .type {
   background-color: rgba(235, 144, 8, 0.3);
 }
-.skincare {
+
+.skincare .type {
   background-color: rgba(8, 235, 27, 0.3);
 }
 
-.massage {
+.massage .type {
   background-color: rgba(8, 125, 235, 0.418);
 }
 
-.tattooing {
+.tattooing .type {
   background-color: rgb(99, 235, 8);
 }
 
-.styling {
+.styling .type {
   background-color: rgb(243, 235, 235);
 }
-

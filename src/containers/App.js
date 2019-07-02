@@ -11,8 +11,9 @@ const mapStateToProps = state => {
 	}
 };
 
+//Базовый компонент
 class App extends React.Component {
-
+//загрузим даннные с информацией об услугах и информацию о доступности их к заказу
 	componentDidMount() {
 		this.props.getCalendarData();
 		this.props.getServiceListData();
@@ -20,7 +21,10 @@ class App extends React.Component {
 
 	render() {
 		return (
-			<div className="App">
+			<div className="App"> 
+			{/*в приложении 2 страницы: главная с инфо об услугах 
+			 и форма бронированияс выбором даты и времени,
+			 с помощью значения из состояния будем скрывать или показывать их*/}
 				{this.props.resFormShown ? < ReservationForm /> : <MainForm />}
 			</div>
 			);

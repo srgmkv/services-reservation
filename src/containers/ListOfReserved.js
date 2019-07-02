@@ -4,7 +4,7 @@ import { cancelService, updateCalendar } from '../state-controls/actions';
 import updateCalFunc from './updateCalFunc';
 import ReservedServices from '../components/ReservedServices';
 import '../ Styles/ReservedServices.css';
-
+//Компонент-контейнер содержит логику отрисовки списка заборонированных услуг
 
 const mapStateToProps = state => {
 	return {
@@ -21,7 +21,8 @@ function mapDispatchToProps(dispatch) {
 }
 
 const reservedServiceList = (props) => {
-	const sorted = props.reservedServices.sort((a, b) => new Date(`${b.date} ${b.time}`) - new Date(`${a.date} ${a.time}`))
+	//сортировка зарезервированных улсуг по дате
+	const sorted = props.reservedServices.sort((a, b) => new Date(`${a.date} ${a.time}`) - new Date(`${b.date} ${b.time}`))
 
 	const removeService = (item) => {
 		props.cancelService(item.id);
@@ -29,7 +30,7 @@ const reservedServiceList = (props) => {
 	}
 
 	return (
-		<ReservedServices
+		<ReservedServices 
 		items={sorted}
 		onClick={removeService}
 		/>

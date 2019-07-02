@@ -1,49 +1,7 @@
 import * as types from './action-types';
 
 const initialState = {
-	reservedServices: [
-		{
-			date: "03-06-2019",
-			time: "16:00",
-			serviceId: "hm6awg1lev",
-			serviceType: "hair styling",
-			company: "Glyph Salon",
-			id: 1
-		},
-		{
-			date: "03-06-2019",
-			time: "16:00",
-			serviceId: "hm6awg1lev",
-			serviceType: "hair styfsdfling",
-			company: "Glyph Sfalon",
-			id: 1
-		},
-		{
-			date: "03-06-2019",
-			time: "16:00",
-			serviceId: "hm6awg1lev",
-			serviceType: "hair ",
-			company: "Glyph ",
-			id: 1
-		},
-		{
-			date: "03-06-2019",
-			time: "16:00",
-			serviceId: "hm6awg1lev",
-			serviceType: "hair styling",
-			company: "Glydddh Sdalddon",
-			id: 1
-		},
-		{
-			date: "03-06-2019",
-			time: "16:00",
-			serviceId: "hm6awg1lev",
-			serviceType: "haidadsdr stsdayling",
-			company: "Glyd",
-			id: 1
-		}
-
-	],
+	reservedServices: [],
 	calendar: {},
 	servicesList: [],
 	filterConditions: {
@@ -61,6 +19,8 @@ const initialState = {
 	}
 };
 
+//Редьюсер общий, пока не удалось его разделить, т.к. из разных редьюсеров нужен был доступ 
+// к одним ключам стейта. Вышло так, что выбрал ифы вместо свичей.
 function rootReducer(state = initialState, action) {
 
 	if (action.type === types.SEND_SELECTED_DATE_TIME) {

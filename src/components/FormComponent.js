@@ -1,6 +1,7 @@
 import React from 'react';
 import Select from './Select';
 
+//Компонент отображения формы для записи на услугу
 const FormComponent = ({
   cancelClick, reserveClick, displayStyle, handleSelect, dates, times, disabledTimeSelect }) => {
 
