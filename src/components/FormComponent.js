@@ -7,25 +7,27 @@ const FormComponent = ({
   return (
     <>
       <div className="reservation-form" style={displayStyle ? { 'display': 'none' } : null}>
-        <div className="reservation-form-container">
+        <div className="form-container">
+          <div className="form-header">Please, choose time to reserve </div>
+          <div className="selects-container">
 
-          <button id="cancel" onClick={cancelClick}>Cancel</button>
+            <Select name="date" onChange={handleSelect}
+              header={'choose date'} items={[]}>
+              {dates}
+            </Select>
 
-          <Select name="date" onChange={handleSelect}
-            header={'choose date'} items={[]}>
-            {dates}
-          </Select>
-
-          <Select name="time" onChange={handleSelect}
-            header={'choose time'} items={[]} disabled={disabledTimeSelect}>
-            {times}
-          </Select>
-
-
-          <button id="reserve" onClick={reserveClick}>Reserve</button>
-
+            <Select name="time" onChange={handleSelect}
+              header={'choose time'} items={[]} disabled={disabledTimeSelect}>
+              {times}
+            </Select>
+          </div>
+          <div className="buttons">
+            <button id="cancel" onClick={cancelClick}>Cancel</button>
+            <button id="reserve" onClick={reserveClick}>Reserve</button>
+          </div>
         </div>
       </div>
+
     </>
   )
 }

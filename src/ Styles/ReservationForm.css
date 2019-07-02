@@ -2,15 +2,56 @@
 .reservation-form {
   border: 1px dotted yellow;
   box-sizing: border-box;
-  justify-content: center;
   display: flex;
   height: 100%;
+  background-color: rgb(170, 166, 166);
 }
 
-.reservation-form-container {
+.form-container {
+  padding: 5px 10px;
+  border-radius: 5px;
+  box-shadow: 3px 3px 17px 4px rgba(80,82,8,0.67);
+  display: flex;
+  flex-direction: column;
   margin: auto;
-  border: 1px dotted yellow;
+  background-color: #f8da9f;
 }
-.modal {
-  
+.form-header {
+  text-align: center;
+  font-size: 18px;
+  padding: 8px;
+}
+
+.selects-container {
+  display: flex;
+}
+
+.selects-container select {
+  padding: 10px 10px;
+  border: 0;
+  background-color: #fff;
+  font-size: 20px;
+  border-radius: 3px;
+}
+
+.selects-container select:last-child {
+  margin-left: 5px;
+} 
+
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  padding: 30px 0 7px 0;
+  justify-content: space-around;
+}
+
+.buttons button {
+  border: 0;
+  padding: 10px 20px;
+  background-color: rgb(245, 32, 32);
+
+  font-size: 20px;
+  border-radius: 3px;
+  color: white;
 }

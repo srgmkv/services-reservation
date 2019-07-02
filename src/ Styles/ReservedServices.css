@@ -1,0 +1,60 @@
+
+.reserved-services-list {
+  margin-bottom: 2px;;
+}
+.reserved-item {
+  display: flex;
+  margin-left: 5px;
+}
+
+.reserved-item div {
+  padding: 1px 5px;
+  margin-bottom: 2px;
+  
+  display: flex;
+  align-items: center;
+}
+
+.reserved-item .date {
+  background-color: rgb(225, 226, 225);
+  padding: 2px 0 0 5px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  flex-direction: column
+}
+.reserved-item .date div:last-child {
+  font-size: 12px;
+}
+
+.reserved-item .type {
+  background-color: rgb(252, 235, 204);
+  flex-grow: 1;
+  text-align: left;
+  font-size: 18px;
+}
+
+.reserved-item .company {
+  background-color: rgb(252, 235, 204);
+  text-align: right;
+  font-size: 14px;
+}
+
+
+.reserved-item .cancel {
+  background-color: rgb(250, 102, 102);
+  font-size: 12px;
+  padding: 0;
+  color: beige;
+  font-weight: 700;
+}
+
+#reserved-list-header {
+  display: inline-block;
+  font-size: 1.5em;
+  background-color: rgb(202, 43, 43);
+  color: white;
+  padding: 5px 15px;
+  border-radius: 7px;
+  margin: 7px 0 5px 5px;
+  ;
+}

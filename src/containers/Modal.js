@@ -15,15 +15,23 @@ const Modal = (props) => {
     props.toggleAppForm();
     props.toggleModal();
   }
-  
-  //берем из списка резервированных услуг последнюю
+
+  //берем из списка резервированных услуг последнюю и передаем эти данные в 
+  //модальное окно-уведомление
   const reservedServiceData = props.reservedServices.filter((el, ind, arr) => el.id === arr.length - 1)[0]
   return (
     <div className="modal">
-      <div className="container">
-        {reservedServiceData.serviceType}
-        {reservedServiceData.date}
-        {reservedServiceData.time}
+      <div className="modal-container">
+        <div className="modal-header">You have successfully ordered the next service:</div>
+        <div className="info">
+          <div>{reservedServiceData.serviceType.toUpperCase()} in {reservedServiceData.company}</div>
+          <div>on <span>
+              {reservedServiceData.date.replace(/-/gi, ' ')}
+            
+            </span> at <span>{reservedServiceData.time}</span>
+          </div>
+        </div>
+
         <button onClick={closeForm}>close</button>
       </div>
     </div>

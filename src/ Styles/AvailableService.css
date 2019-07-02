@@ -1,0 +1,79 @@
+#sortByName {
+  margin: 0 5px 0 10px;
+  font-size: 16px;
+  padding: 10px 10px;
+  max-width: 170px;
+
+  border:0;
+  border: 1px rgb(202, 43, 43) solid;
+  border-radius: 5px;
+  
+}
+
+#sortByType {
+  padding: 3px;
+  font-size: 14px;
+  padding: 10px 15px;
+  margin-left: 5px;
+  font-stretch: ultra-expanded;
+  background-color: rgb(255, 255, 255);
+
+  border: 1px rgb(202, 43, 43) solid;
+  border-radius: 3px;
+
+}
+.inputs {
+  display: flex;
+  margin: 0px 0 5px;;
+  align-items: baseline;
+}
+
+.services-block {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.service-item {
+  border: 2px solid rgb(202, 43, 43);
+  border-radius: 4px;
+  width: 109px;
+  height: 100px;
+  margin: 0 0 5px 5px;
+}
+
+.service-item:hover {
+  background-color: rgba(255, 255, 255, 0.959);
+  border: 2px solid rgb(255, 123, 0);
+}
+
+p {
+  margin: 5px;
+}
+
+.haircoloring {
+  background-color: rgba(8, 235, 235, 0.3);
+}
+
+.hairstyling {
+  background-color: rgba(163, 8, 235, 0.3);
+}
+
+.makeup {
+  background-color: rgba(235, 144, 8, 0.3);
+}
+.skincare {
+  background-color: rgba(8, 235, 27, 0.3);
+}
+
+.massage {
+  background-color: rgba(8, 125, 235, 0.418);
+}
+
+.tattooing {
+  background-color: rgb(99, 235, 8);
+}
+
+.styling {
+  background-color: rgb(243, 235, 235);
+}
+

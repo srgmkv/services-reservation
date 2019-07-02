@@ -2,6 +2,8 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { cancelService, updateCalendar } from '../state-controls/actions';
 import updateCalFunc from './updateCalFunc';
+import ReservedServices from '../components/ReservedServices';
+import '../ Styles/ReservedServices.css';
 
 
 const mapStateToProps = state => {
@@ -27,19 +29,10 @@ const reservedServiceList = (props) => {
 	}
 
 	return (
-		<div className="reserved-services-list">
-			<div id="reserved-list-header">My reservations</div>
-
-			{sorted
-				.map(el => (
-					<div className="reserved-item" id={el.id}
-						key={el.id}>
-						{el.serviceType} {el.company} {el.date} {el.time}
-						<span className="cancel" onClick={() => removeService(el)}>cancel</span>
-					</div>
-				))}
-
-		</div>
+		<ReservedServices
+		items={sorted}
+		onClick={removeService}
+		/>
 	)
 };
 

@@ -19,8 +19,8 @@ class ServicesBlock extends React.Component {
 	// по значению данных полей фильтруем представленные услуги  
 	handleChange = (e) => {
 		const { value, id } = e.target;
-	  //передаем данные в редьюсер для фильтрации
-		this.props.toFilterServiceList({...this.props.filterConditions, [id]: value}); 
+		//передаем данные в редьюсер для фильтрации
+		this.props.toFilterServiceList({ ...this.props.filterConditions, [id]: value });
 	}
 
 	handleClickByServiceItem = (elem) => { //обработка клика по услуге
@@ -37,14 +37,15 @@ class ServicesBlock extends React.Component {
 		const serviceTypes = [...new Set(this.props.servicesList.map(el => el.type))];
 		return (
 			<>
-				<Select name="sortByType"
-					onChange={this.handleChange}
-					header="choose your service"
-					items={serviceTypes}
-				/>
+				<div className="inputs">
+					<Select name="sortByType"
+						onChange={this.handleChange}
+						header="Type of service"
+						items={serviceTypes}
+					/>
 
-				<input type="text" id="sortByName" onChange={this.handleChange} />
-
+					<input type="text" id="sortByName" onChange={this.handleChange} placeholder="search by company"/>
+				</div>
 				<ListOfServices
 					items={this.props.filteredServicesList}
 					onClick={this.handleClickByServiceItem}

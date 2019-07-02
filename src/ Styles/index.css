@@ -6,89 +6,13 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-html, body {
+html, body, #root, .App  {
   height: 100%;
 }
 body {
   max-width: 700px;
   margin: 0 auto;
 }
-#root {
-  height: 100%;
-}
-.App {
-  height: 100%;
-}
-.services-block {
-  border: 1px dotted rgb(60, 255, 0);
-  display: flex;
-  flex-wrap: wrap;
-}
 
-.service-item {
-  border: 2px solid blue;
-  width: 109px;
-  height: 100px;
-  margin: 0 0 5px 5px;
-}
 
-.service-item:hover {
-  background-color: rgba(255, 255, 255, 0.959);
-  border: 2px solid rgb(255, 123, 0);
-}
-
-p {
-  margin: 5px;
-}
-.reserved-item {
-  margin: 5px 0 ;
-}
-
-#reserved-list-header{
-  display: inline-block;
-  font-size: 1.5em;
-  background-color: brown;
-  color: white;
-  padding: 3px 5px;
-  border-radius: 7px;
-  margin-top: 5px;
-}
-
-#sortByType{
-  margin-bottom: 7px;
-}
-#reserved-list-header, #sortByType, .reserved-item {
-  margin-left: 5px;
-}
-
-.haircoloring {
-  background-color: rgba(8, 235, 235, 0.3);
-}
-
-.hairstyling {
-  background-color: rgba(163, 8, 235, 0.3);
-}
-
-.makeup {
-  background-color: rgba(235, 144, 8, 0.3);
-}
-.skincare {
-  background-color: rgba(8, 235, 27, 0.3);
-}
-
-.massage {
-  background-color: rgba(8, 125, 235, 0.418);
-}
-
-.tattooing {
-  background-color: rgb(99, 235, 8);
-}
-
-.styling {
-  background-color: rgb(243, 235, 235);
-}
-
-#cancel {
-  display: block;
-}
 

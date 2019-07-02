@@ -1,7 +1,49 @@
 import * as types from './action-types';
 
 const initialState = {
-	reservedServices: [],
+	reservedServices: [
+		{
+			date: "03-06-2019",
+			time: "16:00",
+			serviceId: "hm6awg1lev",
+			serviceType: "hair styling",
+			company: "Glyph Salon",
+			id: 1
+		},
+		{
+			date: "03-06-2019",
+			time: "16:00",
+			serviceId: "hm6awg1lev",
+			serviceType: "hair styfsdfling",
+			company: "Glyph Sfalon",
+			id: 1
+		},
+		{
+			date: "03-06-2019",
+			time: "16:00",
+			serviceId: "hm6awg1lev",
+			serviceType: "hair ",
+			company: "Glyph ",
+			id: 1
+		},
+		{
+			date: "03-06-2019",
+			time: "16:00",
+			serviceId: "hm6awg1lev",
+			serviceType: "hair styling",
+			company: "Glydddh Sdalddon",
+			id: 1
+		},
+		{
+			date: "03-06-2019",
+			time: "16:00",
+			serviceId: "hm6awg1lev",
+			serviceType: "haidadsdr stsdayling",
+			company: "Glyd",
+			id: 1
+		}
+
+	],
 	calendar: {},
 	servicesList: [],
 	filterConditions: {
