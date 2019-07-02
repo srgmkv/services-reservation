@@ -1,12 +1,11 @@
 
 .modal {
-  border: 1px dotted yellow;
   box-sizing: border-box;
   justify-content: center;
   display: flex;
   height: 100%;
 
-  background-color: rgb(202, 199, 199);
+  background-color: rgb(201, 198, 198);
 }
 
 .modal-container {

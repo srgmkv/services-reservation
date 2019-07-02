@@ -1,10 +1,9 @@
 
 .reservation-form {
-  border: 1px dotted yellow;
   box-sizing: border-box;
   display: flex;
   height: 100%;
-  background-color: rgb(170, 166, 166);
+  background-color: rgb(228, 227, 227);
 }
 
 .form-container {
