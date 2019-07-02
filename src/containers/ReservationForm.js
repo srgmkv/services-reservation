@@ -2,9 +2,9 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { toggleAppForm, sendDateTime, reserveService, updateCalendar, toggleModal } from '../state-controls/actions';
 import updateCalFunc from './updateCalFunc';
-import Modal from '../components/Modal';
+import Modal from './Modal';
 import FormComponent from '../components/FormComponent';
-import '../ReservationForm.css'
+import '../ Styles/ReservationForm.css'
 
 //  ФОРМА ЗАПИСИ НА УСЛУГУ
 const mapStateToProps = state => { //состояние из стора для текущего компонента

@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { toggleModal, toggleAppForm } from '../state-controls/actions';
-import '../Modal.css'
+import '../ Styles/Modal.css'
 
 const mapStateToProps = state => {
   return {
@@ -10,10 +10,13 @@ const mapStateToProps = state => {
 };
 
 const Modal = (props) => {
+  //обработчик закрывает модальное окно и форму бронирования
   const closeForm = () => {
     props.toggleAppForm();
     props.toggleModal();
   }
+  
+  //берем из списка резервированных услуг последнюю
   const reservedServiceData = props.reservedServices.filter((el, ind, arr) => el.id === arr.length - 1)[0]
   return (
     <div className="modal">
