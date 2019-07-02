@@ -5,8 +5,7 @@ const ListOfServices = ({ items, onClick }) => {
   return (
     <div className="services-block">
       {items.map((el, index) => (
-
-        <div className={`service-item ${el.type.replace(' ', '')}`}
+        <div className={`service-item ${el.type.replace(' ', '')}`} //добавим тип услуги в класс для одинаковой стилизации
           key={index}
           onClick={() => onClick(el)}>
           <div className="type"><div>{el.type}</div></div>

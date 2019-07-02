@@ -12,11 +12,12 @@ const mapStateToProps = state => {
 	}
 };
 
+//Компонент-контейнер для полей фильтрации и отрисовки каталога услуг
 const ServicesBlock = (props) => {
 
 	// обработка изменения элементов (для фильтрации):
-	// клик на элемент списка с типом услуг; поле поиска услуги по названию
-	// по значению данных полей фильтруем представленные услуги  
+	// клик на элемент списка с типом услуг; поле поиска услуги по названию компании.
+	// По значению данных полей фильтруем отображение услуг
 	const handleChange = (e) => {
 		const { value, id } = e.target;
 		//передаем данные в редьюсер для фильтрации
@@ -39,7 +40,7 @@ const ServicesBlock = (props) => {
 			<div className="inputs">
 				<Select name="sortByType"
 					onChange={handleChange}
-					header="Type of service"
+					header="Sort by type"
 					items={serviceTypes}
 				/>
 

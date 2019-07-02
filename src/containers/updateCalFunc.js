@@ -2,7 +2,6 @@
 //Используется  при резервировании и отмене бронирования услуги
 const updateCalFunc = (arr, cond) => {
   const byTimes = (arr) => {
-    console.log('inner: ', arr);
     return arr.map(el => {
       if (el.value === cond.time) {
         return { isBlocked: !el.isBlocked, value: el.value }
@@ -11,7 +10,6 @@ const updateCalFunc = (arr, cond) => {
     })
   }
   const byDate = (arr) => {
-    console.log('inner: ', arr);
     return arr.map(el => {
       if (el.date === cond.date) {
         return { date: el.date, times: byTimes(el.times) }
