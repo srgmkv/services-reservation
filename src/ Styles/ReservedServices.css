@@ -44,14 +44,16 @@
 
 
 .reserved-item .cancel {
-  background-color: rgb(250, 102, 102);
+  color: rgb(245, 29, 29);
+  border: 2px solid rgb(225, 226, 225);;
   font-size: 12px;
   padding: 0 3px;
-  color: beige;
   font-weight: 700;
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
 }
+
+
 
 #reserved-list-header {
   display: inline-block;
