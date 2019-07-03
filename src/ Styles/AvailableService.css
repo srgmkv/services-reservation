@@ -9,11 +9,11 @@
 }
 
 #sortByType {
+  width: 150px;
   padding: 3px;
   font-size: 14px;
   padding: 10px 15px;
   margin-left: 5px;
-  font-stretch: ultra-expanded;
   background-color: rgb(255, 255, 255);
   border: 1px rgb(202, 43, 43) solid;
   border-radius: 3px;
@@ -21,9 +21,7 @@
 
 .inputs {
   display: flex;
-  margin: 0px 0 5px;
-  ;
-  align-items: baseline;
+  margin-bottom: 5px;
 }
 
 .services-block {
