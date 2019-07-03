@@ -28,14 +28,16 @@
 }
 
 .reserved-item .type {
-  background-color: rgb(252, 235, 204);
+  border-top: 2px solid rgb(225, 226, 225);
+  border-bottom: 2px solid rgb(225, 226, 225);
   flex-grow: 1;
   text-align: left;
   font-size: 18px;
 }
 
 .reserved-item .company {
-  background-color: rgb(252, 235, 204);
+  border-top: 2px solid rgb(225, 226, 225);
+  border-bottom: 2px solid rgb(225, 226, 225);
   text-align: right;
   font-size: 14px;
 }
