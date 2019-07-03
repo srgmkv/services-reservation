@@ -8,7 +8,7 @@ const ListOfServices = ({ items, onClick }) => {
         <div className={`service-item ${el.type.replace(' ', '')}`} //добавим тип услуги в класс для одинаковой стилизации
           key={index}
           onClick={() => onClick(el)}>
-          <div className="type"><div>{el.type}</div></div>
+          <div className="type">{el.type}</div>
           <div className="price"><div>{el.price} &#x20bd;</div></div>
           <div className="company">{el.company.name}</div>
         </div>
