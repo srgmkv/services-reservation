@@ -1,0 +1,2037 @@
+[
+  {
+    "id": "hm6awg1lev",
+    "dates": [
+      {
+        "date": "07-06-2019",
+        "times": [
+          {
+            "isBlocked": false,
+            "value": "09:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "10:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "11:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "12:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "13:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "14:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "15:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "16:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "17:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "18:00"
+          }
+        ]
+      },
+      {
+        "date": "08-06-2019",
+        "times": [
+          {
+            "isBlocked": true,
+            "value": "09:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "10:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "11:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "12:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "13:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "14:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "15:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "16:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "17:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "18:00"
+          }
+        ]
+      },
+      {
+        "date": "09-06-2019",
+        "times": [
+          {
+            "isBlocked": true,
+            "value": "09:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "10:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "11:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "12:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "13:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "14:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "15:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "16:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "17:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "18:00"
+          }
+        ]
+      },
+      {
+        "date": "10-06-2019",
+        "times": [
+          {
+            "isBlocked": true,
+            "value": "09:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "10:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "11:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "12:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "13:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "14:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "15:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "16:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "17:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "18:00"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "v38pfojaj5",
+    "dates": [
+      {
+        "date": "07-06-2019",
+        "times": [
+          {
+            "isBlocked": false,
+            "value": "09:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "10:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "11:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "12:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "13:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "14:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "15:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "16:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "17:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "18:00"
+          }
+        ]
+      },
+      {
+        "date": "08-06-2019",
+        "times": [
+          {
+            "isBlocked": true,
+            "value": "09:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "10:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "11:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "12:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "13:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "14:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "15:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "16:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "17:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "18:00"
+          }
+        ]
+      },
+      {
+        "date": "09-06-2019",
+        "times": [
+          {
+            "isBlocked": true,
+            "value": "09:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "10:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "11:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "12:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "13:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "14:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "15:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "16:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "17:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "18:00"
+          }
+        ]
+      },
+      {
+        "date": "10-06-2019",
+        "times": [
+          {
+            "isBlocked": true,
+            "value": "09:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "10:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "11:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "12:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "13:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "14:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "15:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "16:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "17:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "18:00"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "y50ap8fu9b",
+    "dates": [
+      {
+        "date": "07-06-2019",
+        "times": [
+          {
+            "isBlocked": false,
+            "value": "09:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "10:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "11:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "12:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "13:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "14:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "15:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "16:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "17:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "18:00"
+          }
+        ]
+      },
+      {
+        "date": "08-06-2019",
+        "times": [
+          {
+            "isBlocked": true,
+            "value": "09:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "10:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "11:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "12:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "13:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "14:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "15:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "16:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "17:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "18:00"
+          }
+        ]
+      },
+      {
+        "date": "09-06-2019",
+        "times": [
+          {
+            "isBlocked": true,
+            "value": "09:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "10:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "11:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "12:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "13:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "14:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "15:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "16:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "17:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "18:00"
+          }
+        ]
+      },
+      {
+        "date": "10-06-2019",
+        "times": [
+          {
+            "isBlocked": true,
+            "value": "09:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "10:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "11:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "12:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "13:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "14:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "15:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "16:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "17:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "18:00"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "2z3ya9zask",
+    "dates": [
+      {
+        "date": "07-06-2019",
+        "times": [
+          {
+            "isBlocked": false,
+            "value": "09:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "10:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "11:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "12:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "13:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "14:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "15:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "16:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "17:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "18:00"
+          }
+        ]
+      },
+      {
+        "date": "08-06-2019",
+        "times": [
+          {
+            "isBlocked": true,
+            "value": "09:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "10:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "11:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "12:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "13:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "14:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "15:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "16:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "17:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "18:00"
+          }
+        ]
+      },
+      {
+        "date": "09-06-2019",
+        "times": [
+          {
+            "isBlocked": true,
+            "value": "09:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "10:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "11:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "12:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "13:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "14:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "15:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "16:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "17:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "18:00"
+          }
+        ]
+      },
+      {
+        "date": "10-06-2019",
+        "times": [
+          {
+            "isBlocked": true,
+            "value": "09:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "10:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "11:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "12:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "13:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "14:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "15:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "16:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "17:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "18:00"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "wpoj27n86c",
+    "dates": [
+      {
+        "date": "07-06-2019",
+        "times": [
+          {
+            "isBlocked": false,
+            "value": "09:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "10:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "11:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "12:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "13:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "14:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "15:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "16:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "17:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "18:00"
+          }
+        ]
+      },
+      {
+        "date": "08-06-2019",
+        "times": [
+          {
+            "isBlocked": true,
+            "value": "09:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "10:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "11:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "12:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "13:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "14:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "15:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "16:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "17:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "18:00"
+          }
+        ]
+      },
+      {
+        "date": "09-06-2019",
+        "times": [
+          {
+            "isBlocked": true,
+            "value": "09:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "10:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "11:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "12:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "13:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "14:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "15:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "16:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "17:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "18:00"
+          }
+        ]
+      },
+      {
+        "date": "10-06-2019",
+        "times": [
+          {
+            "isBlocked": true,
+            "value": "09:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "10:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "11:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "12:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "13:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "14:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "15:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "16:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "17:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "18:00"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "yfjltah4by",
+    "dates": [
+      {
+        "date": "07-06-2019",
+        "times": [
+          {
+            "isBlocked": false,
+            "value": "09:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "10:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "11:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "12:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "13:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "14:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "15:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "16:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "17:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "18:00"
+          }
+        ]
+      },
+      {
+        "date": "08-06-2019",
+        "times": [
+          {
+            "isBlocked": true,
+            "value": "09:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "10:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "11:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "12:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "13:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "14:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "15:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "16:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "17:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "18:00"
+          }
+        ]
+      },
+      {
+        "date": "09-06-2019",
+        "times": [
+          {
+            "isBlocked": true,
+            "value": "09:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "10:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "11:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "12:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "13:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "14:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "15:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "16:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "17:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "18:00"
+          }
+        ]
+      },
+      {
+        "date": "10-06-2019",
+        "times": [
+          {
+            "isBlocked": true,
+            "value": "09:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "10:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "11:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "12:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "13:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "14:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "15:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "16:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "17:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "18:00"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "v9r0w7d13l",
+    "dates": [
+      {
+        "date": "07-06-2019",
+        "times": [
+          {
+            "isBlocked": false,
+            "value": "09:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "10:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "11:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "12:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "13:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "14:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "15:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "16:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "17:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "18:00"
+          }
+        ]
+      },
+      {
+        "date": "08-06-2019",
+        "times": [
+          {
+            "isBlocked": true,
+            "value": "09:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "10:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "11:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "12:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "13:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "14:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "15:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "16:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "17:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "18:00"
+          }
+        ]
+      },
+      {
+        "date": "09-06-2019",
+        "times": [
+          {
+            "isBlocked": true,
+            "value": "09:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "10:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "11:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "12:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "13:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "14:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "15:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "16:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "17:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "18:00"
+          }
+        ]
+      },
+      {
+        "date": "10-06-2019",
+        "times": [
+          {
+            "isBlocked": true,
+            "value": "09:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "10:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "11:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "12:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "13:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "14:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "15:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "16:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "17:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "18:00"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "2t70rnu4ev",
+    "dates": [
+      {
+        "date": "07-06-2019",
+        "times": [
+          {
+            "isBlocked": false,
+            "value": "09:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "10:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "11:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "12:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "13:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "14:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "15:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "16:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "17:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "18:00"
+          }
+        ]
+      },
+      {
+        "date": "08-06-2019",
+        "times": [
+          {
+            "isBlocked": true,
+            "value": "09:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "10:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "11:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "12:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "13:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "14:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "15:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "16:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "17:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "18:00"
+          }
+        ]
+      },
+      {
+        "date": "09-06-2019",
+        "times": [
+          {
+            "isBlocked": true,
+            "value": "09:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "10:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "11:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "12:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "13:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "14:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "15:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "16:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "17:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "18:00"
+          }
+        ]
+      },
+      {
+        "date": "10-06-2019",
+        "times": [
+          {
+            "isBlocked": true,
+            "value": "09:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "10:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "11:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "12:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "13:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "14:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "15:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "16:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "17:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "18:00"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "yy3qedia56",
+    "dates": [
+      {
+        "date": "07-06-2019",
+        "times": [
+          {
+            "isBlocked": false,
+            "value": "09:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "10:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "11:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "12:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "13:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "14:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "15:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "16:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "17:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "18:00"
+          }
+        ]
+      },
+      {
+        "date": "08-06-2019",
+        "times": [
+          {
+            "isBlocked": true,
+            "value": "09:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "10:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "11:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "12:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "13:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "14:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "15:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "16:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "17:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "18:00"
+          }
+        ]
+      },
+      {
+        "date": "09-06-2019",
+        "times": [
+          {
+            "isBlocked": true,
+            "value": "09:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "10:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "11:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "12:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "13:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "14:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "15:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "16:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "17:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "18:00"
+          }
+        ]
+      },
+      {
+        "date": "10-06-2019",
+        "times": [
+          {
+            "isBlocked": true,
+            "value": "09:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "10:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "11:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "12:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "13:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "14:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "15:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "16:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "17:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "18:00"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "0jxhiz07nq",
+    "dates": [
+      {
+        "date": "07-06-2019",
+        "times": [
+          {
+            "isBlocked": false,
+            "value": "09:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "10:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "11:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "12:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "13:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "14:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "15:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "16:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "17:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "18:00"
+          }
+        ]
+      },
+      {
+        "date": "08-06-2019",
+        "times": [
+          {
+            "isBlocked": true,
+            "value": "09:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "10:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "11:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "12:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "13:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "14:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "15:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "16:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "17:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "18:00"
+          }
+        ]
+      },
+      {
+        "date": "09-06-2019",
+        "times": [
+          {
+            "isBlocked": true,
+            "value": "09:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "10:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "11:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "12:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "13:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "14:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "15:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "16:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "17:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "18:00"
+          }
+        ]
+      },
+      {
+        "date": "10-06-2019",
+        "times": [
+          {
+            "isBlocked": true,
+            "value": "09:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "10:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "11:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "12:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "13:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "14:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "15:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "16:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "17:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "18:00"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "try6wgulev",
+    "dates": [
+      {
+        "date": "07-06-2019",
+        "times": [
+          {
+            "isBlocked": false,
+            "value": "09:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "10:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "11:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "12:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "13:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "14:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "15:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "16:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "17:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "18:00"
+          }
+        ]
+      },
+      {
+        "date": "08-06-2019",
+        "times": [
+          {
+            "isBlocked": true,
+            "value": "09:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "10:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "11:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "12:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "13:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "14:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "15:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "16:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "17:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "18:00"
+          }
+        ]
+      },
+      {
+        "date": "09-06-2019",
+        "times": [
+          {
+            "isBlocked": true,
+            "value": "09:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "10:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "11:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "12:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "13:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "14:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "15:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "16:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "17:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "18:00"
+          }
+        ]
+      },
+      {
+        "date": "10-06-2019",
+        "times": [
+          {
+            "isBlocked": true,
+            "value": "09:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "10:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "11:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "12:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "13:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "14:00"
+          },
+          {
+            "isBlocked": true,
+            "value": "15:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "16:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "17:00"
+          },
+          {
+            "isBlocked": false,
+            "value": "18:00"
+          }
+        ]
+      }
+    ]
+  }
+]
