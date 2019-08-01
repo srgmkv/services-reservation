@@ -12,4 +12,6 @@
 #### `npm install`  
 
 3. Запустить локальный сервер разработки:
-#### `npm start`
+#### `npm start`  
+
+[> ДЕМО <](https://srgmkv.github.io/services-reservation)
